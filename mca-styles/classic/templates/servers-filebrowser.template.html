@@ -1,0 +1,78 @@
+{if $installed == "ja"}
+<div id="dialog-form-new" title="{$new_dir}">
+    <form>
+        <fieldset>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="Name...." class="text ui-widget-content ui-corner-all">
+
+        </fieldset>
+    </form>
+</div>
+<div id="dialog-form-file-new" title="{$new_file}">
+    <form>
+        <fieldset>
+            <label for="filename">Name</label>
+            <input type="text" name="filename" id="filename" value="Name...."
+                   class="text ui-widget-content ui-corner-all">
+        </fieldset>
+    </form>
+</div>
+<div id="dialog-form-download" title="{$download}">
+    <form>
+        <fieldset>
+            <label for="downloadurl">Name</label>
+            <input type="text" name="downloadurl" id="downloadurl" value="Url...."
+                   class="text ui-widget-content ui-corner-all">
+        </fieldset>
+    </form>
+</div>
+<div id="dialog-confirm" title="Delete this file?">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+        This item will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>
+
+
+<div id="filebrowser">
+    <div id="serverid" style="display: none">{$serverid}</div>
+    <div id="middle">
+        <div id="editor">
+            <h2><span></span> Editor</h2>
+
+            <div class="buttons">
+                <div class="new"></div>
+                <div class="save"></div>
+                <div class="delete"></div>
+            </div>
+            <div class="toolbar">
+                <div class="dashicons-update dashicons reload"></div>
+                <div class="dashicons dashicons-no delete"></div>
+                <div class="dashicons dashicons-menu back"></div>
+                <div class="dashicons dashicons-clipboard save"></div>
+            </div>
+            <textarea>{$editor}</textarea>
+        </div>
+        <div id="fileview">
+            <div id="toolbar">
+                <div class="dashicons-update dashicons reload"></div>
+                <div class="dashicons dashicons-info help"></div>
+                <div class="dashicons dashicons-download download"></div>
+                <div class="dashicons dashicons-welcome-add-page newfile"></div>
+                <div class="dashicons dashicons-plus-alt new"></div>
+            </div>
+            <div id="breadcrumbs">
+                {$breadcrumbs}
+            </div>
+            <br/><br/>
+            <hr/>
+            <div class="content">
+                {$vielview}
+            </div>
+        </div>
+    </div>
+    <div id="extras">
+        <div id="infos">
+            {$fileinfos}
+        </div>
+    </div>
+</div>
+{/if}

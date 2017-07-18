@@ -1,0 +1,36 @@
+/**
+ *
+ *
+ * Settings tab CSS
+ *
+ *
+ **/
+
+.box {
+    background-color: #fafafa;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin: 50px auto 0;
+    min-width: 360px;
+    padding: 30px;
+    height: auto;
+    width: 450px;
+}
+
+.box .screenshot img {
+    float: none;
+    margin: 5px;
+}
+
+.box:hover {
+    background: #EEEEEE;
+}
+
+#uninstall {
+    width: 100%;
+    max-width: 1200px !important;
+}
+
+#removeMessage, #removeCode, #removeLoading, #removeQuestion {
+    display: none;
+}

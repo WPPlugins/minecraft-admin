@@ -1,0 +1,136 @@
+<div id="install">
+    <div id="info_right">
+        <h1>
+            {$minecraftadmin} - {$version}
+        </h1>
+    </div>
+    <div class="Table">
+        <div class="Row">
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$last_e}</h3>
+                </div>
+                <div class="content">
+                    <a href="{$link}" title="{$linktitle}">{$title}</a>
+
+                    <div id="dowload_content">{$content}</div>
+                    <div class="uptodate button">{$uptodate}</div>
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$minecraftservers}</h3>
+                </div>
+                <div class="content">
+                    {if $networkadmin == "nein"}
+                    <table>
+                        <tr valign="top">
+                            <th scope="row">
+                                {$name}
+                            </th>
+                            <th>
+                                {$deletelink}
+                            </th>
+                            <th>
+                                {$change_name_e}
+                            </th>
+                        </tr>
+                        {if isset($servers)}
+                        {foreach key=id item=servername from=$servers}
+                        <tr valign="top">
+                            <td scope="row">
+                                {mca_url nav="servers" subnav="commands" serverid=$id var=URL}
+                                <a href="{$URL}" class="button">{$servername}</a>
+                            </td>
+                            <td>
+                                {mca_url mc_server_del=$id var=URL}
+                                <a href="{$URL}" class="button remove" style="color:red !important;">{$delete}</a>
+                            </td>
+                            <td>
+                                {mca_url nav="servers" subnav="settings" serverid=$id var=change_name}
+                                <a href="{$change_name}" class="button">{$change_name_e}</a>
+                            </td>
+                        </tr>
+                        {/foreach}
+                        {/if}
+                    </table>
+                    {/if}
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$e_new}</h3>
+                </div>
+                <div class="content">
+                    {if $networkadmin == "nein"}
+                    <form method="post" action="{$mcurl}">
+                        {$minecraftserver}
+                        <select name="server" size="1">
+                            {foreach key=id item=jargroup from=$jarlist}
+                            <option value="{$jargroup}">
+                                {$jargroup}
+                            </option>
+                            {/foreach}
+                        </select>
+                        <input type="hidden" name="new_server" value="new_server"/>
+
+                        <p class="submit">
+                            <input type="submit" class="button-primary" value="{$newminecraftserver}" name="submit"/>
+                        </p>
+                    </form>
+                    {/if}
+                </div>
+            </div>
+        </div>
+        <div class="Row">
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$news_e}</h3>
+                </div>
+                <div class="content">
+                    <a href="{$linknews}" title="{$linktitlenews}">{$titlenews}</a>
+
+                    <div id="latest_news_content">{$contentnews}</div>
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$donate_e}</h3>
+                </div>
+                <div class="content">
+                    <div id="donate_content">{$donate_dis}<br/>
+
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_s-xclick"/>
+                            <input type="hidden" name="hosted_button_id" value="AS4HWDLDGK4WU"/>
+                            <input type="image" alt="PayPal - The safer, easier way to pay online!" name="submit"
+                                   src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"/>
+                            <img alt="" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1"
+                                 border="0"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$version_e}</h3>
+                </div>
+                <div class="content">
+                    <div id="version_content">
+                        <ul>
+                            {foreach key=id item=listname from=$versionlist}
+                            <li>&bull;{$listname}</li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h3 style="color: red!important;">
+    {$attention}
+</h3>
+<div class="message" style="display: none">
+    {$nachricht}
+</div>

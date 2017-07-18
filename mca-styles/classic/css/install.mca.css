@@ -1,0 +1,9 @@
+h1 {
+    font-size: 40pt;
+    text-align: center;
+}
+
+textarea {
+    min-width: 450px;
+    min-height: 50px;
+}

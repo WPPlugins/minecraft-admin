@@ -1,0 +1,8 @@
+.def_world {
+    border: 1px solid black;
+    float: left;
+    margin: 25px;
+    padding: 15px;
+    width: 250px;
+    height: 220px;
+}

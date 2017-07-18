@@ -1,0 +1,160 @@
+/*****
+*
+*
+*
+* Filebrowser
+*
+*
+*****/
+
+#filetree {
+    clear: both;
+    margin-left: 25px;
+    width: 250px;
+    background-color: #fafafa;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+
+    padding: 30px;
+}
+
+#filetree ul {
+
+}
+
+#filetree li {
+    padding-left: 25px;
+}
+
+#infos {
+    position: fixed;
+}
+
+#extras {
+    min-width: 320px;
+}
+
+#middle {
+    background-color: #fafafa;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+    clear: both;
+    font-size: 18pt;
+    margin-left: 15px;
+    padding: 30px;
+}
+
+#fileview li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#fileview li img {
+    margin-right: 15px;
+}
+
+#fileview li:hover, #filetree li:hover {
+    background: #309090;
+}
+
+#preview {
+    background-color: #fafafa;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+    clear: both;
+    height: 300px;
+    padding: 5px;
+    position: fixed;
+    min-width: 250px;
+    margin-top: 100px;
+}
+#preview img.dir {
+    left: 50%;
+    margin-left: -64px;
+    margin-top: -64px;
+    position: relative;
+    top: 50%;
+}
+
+#extra {
+
+}
+
+#middle {
+
+}
+
+#filebrowser {
+    clear: both;
+    margin-right: 20px;
+    position: relative;
+}
+
+#fileview li ul li {
+    display: none;
+}
+
+#fileview li {
+    display: block;
+}
+
+#toolbar {
+    float: right;
+    margin-right: -23px;
+    margin-top: -23px;
+}
+
+#editor {
+    width: 0;
+    display: none;
+}
+
+#editor textarea {
+    width: 100%;
+}
+
+#editor .toolbar {
+    background: none repeat scroll 0 0 #eeeeee;
+    border-radius: 5px 5px 0 0;
+    float: right;
+    padding: 15px;
+    width: 250px;
+}
+
+#editor h2 {
+    float: left;
+}
+
+#editor .toolbar img {
+    width: 50px;
+}
+
+.mc_admin_hidden {
+    display: none;
+    background-color: #fafafa;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0 3px 3px 0;
+    clear: both;
+    padding: 15px;
+}
+
+.mc_admin_hidden_false:hover .mc_admin_hidden {
+    background: none repeat scroll 0 0 #AACC00;
+    color: #FFFF77;
+    display: block;
+    font-weight: bold;
+    position: fixed;
+    z-index: 100;
+    margin-top: 15px;
+}
+
+#mca .dashicons, #mca .dashicons-before:before {
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+.ui-tooltip {
+    width: 320px;
+    height: 320px;
+}

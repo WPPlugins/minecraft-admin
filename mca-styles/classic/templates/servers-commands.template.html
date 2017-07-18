@@ -1,0 +1,230 @@
+<br/>
+<br/>
+<br/>
+<div id="tabs">
+<ul>
+    <li><a href="#basic">{$basic}</a></li>
+    <li><a href="#cmd">{$commands}</a></li>
+    <li><a href="#say">{$say}</a></li>
+    <li><a href="#time">{$time}</a></li>
+    <li><a href="#op">{$op}</a></li>
+    <li><a href="#bl">{$blacklist}</a></li>
+    <li><a href="#wl">{$whitelist}</a></li>
+    <li><a href="#gm">{$gamemode}</a></li>
+    <li><a href="#kick">{$kick}</a></li>
+    <li><a href="#toggledownfall">{$toggledownfall_tab}</a></li>
+    <li><a href="#give">{$give}</a></li>
+    <li><a href="#xp">{$xp}</a></li>
+    <li><a href="#worlds">{$world}</a></li>
+</ul>
+<div class="box" id="basic">
+    <a href="{$restart}" class="button">
+        {$restart_e}
+    </a>
+    <a href="{$start}" class="button">
+        {$start_e}
+    </a>
+    <a href="{$stop}" class="button">
+        {$stop_e}
+    </a>
+    <a href="{$backup}" class="button">
+        {$backup_e}
+    </a>
+    <a href="{$reload}" class="button">
+        {$reload_e}
+    </a>
+    <a href="{$save}" class="button">
+        {$save_e}
+    </a>
+</div>
+<div class="box" id="worlds">
+    {if $is=="ja"}
+    {$worldsintro}
+    {$worldslist}
+    <div class="clear">
+        {$worldsintrodownload}
+        <form action="{$send}" method="POST" class="clear">
+            <input type="text" name="world_dl"
+                   placeholder="http://download1399.mediafire.com/cw9cwssih8xg/8f23jq16x2y29z2/Tazader+City+%28v10.1.1%29.zip"/>
+            <select name="format">
+                <option value="zip" selected>.zip</option>
+                <option value="rar">.rar</option>
+                <option value="tar">.tar</option>
+                <option value="tar.gz">.tar.gz</option>
+            </select>
+            <input type="submit" value="{$world_dl_e}" class="button-primary"/>
+        </form>
+    </div>
+    {else}
+    {$server_have_to_run}
+    {/if}
+</div>
+<div class="box" id="cmd">
+    {$command}
+    <form action="{$send}" method="POST">
+        <input type="text" name="cmd"/>
+        <input type="submit" value="{$command_e}" class="button-primary"/>
+    </form>
+</div>
+<div class="box" id="say">
+    {if $is=="ja"}
+    <form action="{$send}" method="POST">
+        <input type="text" name="say"/>
+        <input type="submit" value="{$say_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="time">
+    {if $is=="ja"}
+    <form action="{$send}#time" method="POST">
+        <input type="text" name="time"/>
+        <input type="submit" value="{$time_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="kick">
+    {if $is=="ja"}
+    <form action="{$send}#kick" method="POST">
+        <input type="text" name="kick"/>
+        <input type="submit" value="{$kick_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="xp">
+    {if $is=="ja"}
+    <form action="{$send}" method="POST">
+        <input type="text" name="xp" placeholder="playername 10"/>
+        <input type="submit" value="{$xp_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="give">
+    {if $is=="ja"}
+    <form action="{$send}#give" method="POST">
+        <input type="text" name="give" placeholder="playername diamond 1"/>
+        <input type="submit" value="{$send_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="gm">
+    {if $is=="ja"}
+    <form action="{$send}#gm" method="POST">
+        <input type="text" name="gm"/>
+        <select name="type">
+            <option value="creative">{$creative}</option>
+            <option value="survival">{$survival}</option>
+        </select>
+        <input type="submit" value="{$send_gm_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="wl">
+    {if $is=="ja"}
+    {$is_wl}:
+            <span class="mca_onoff">
+                <a href="{$wl_on}#wl" class="button on">{$wl_on_e}</a>
+                <a href="{$wl_off}#wl" class="button off">{$wl_off_e}</a>
+            </span>
+    <br/>
+    {foreach key=id item=name from=$wllist}
+    {if !empty($name)}
+    {mca_url nav="servers" subnav="servers_befehle" serverid=$serverid p="wl_del" name=$name var="URL"}
+    <a href="{$URL}#wl" class="delete">{$name}</a> &bull;
+    {/if}
+    {/foreach}
+    <br/>
+    {$wl_e}:
+    <form action="{$send}#wl" method="POST">
+        <input type="text" name="wl"/>
+        <input type="submit" value="{$send_wl_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="bl">
+    {if $is=="ja"}
+    {foreach key=id item=name from=$bllist}
+    {if !empty($name.3)}
+
+    {mca_url nav="servers" subnav="servers_befehle" serverid=$serverid p="bl_del" name=$name.0 var="URL"}
+    <a href="{$URL}#bl" class="delete">{$name.0}</a> &bull;
+    {/if}
+    {/foreach}<br/>
+    {$bl_e}:
+    <form action="{$send}#bl" method="POST">
+        <input type="text" name="bl"/>
+        <select name="type">
+            <option value="player">{$player}</option>
+            <option value="ip">{$ip}</option>
+        </select>
+        <input type="submit" value="{$send_bl_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="op">
+    {if $is=="ja"}
+    {foreach key=id item=name from=$oplist}
+    {if !empty($name)}
+    {mca_url nav="servers" subnav="befehle" serverid=$serverid p="op_del" name=$name var="URL"}
+    <a href="{$URL}#op" class="delete">{$name}</a> &bull;
+    {/if}
+    {/foreach}<br/>
+    {$op_e}:
+    <form action="{$send}#op" method="POST">
+        <input type="text" name="op"/>
+        <input type="submit" value="{$send_op_e}" class="button-primary"/>
+    </form>
+    {else}
+    {$server_have_to_run}
+    {/if}
+
+</div>
+<div class="box" id="toggledownfall">
+    {if $is=="ja"}
+    <a href="{$toggledownfall}#toggledownfall" class="button">{$toggledownfall_e}</a>
+    {else}
+    {$server_have_to_run}
+    {/if}
+</div>
+
+</div>
+
+
+<br/>
+{$status}
+<br/>
+
+<br/>
+{$online}
+<br/>
+{$output}
+<br/>
+<br/>
+<div id="mc_core_log">
+    <textarea cols="150" rows="25">
+        {$textarea}
+    </textarea>
+</div>

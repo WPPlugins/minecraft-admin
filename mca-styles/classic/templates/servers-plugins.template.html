@@ -1,0 +1,34 @@
+{if $installed == "ja"}
+<a href="{$cache_url}">{$e_cache}</a>
+<form action="" method="POST">
+    {$e_install}:<input type="text" name="install" placeholder="{$e_placeholder}" {$val}>
+    <input type="submit" name="absenden" value="{$e_send}" class="button">
+</form>
+{if empty($val)}
+<br/>
+<table class="download">
+    <tr>
+        <th>{$e_name}</th>
+        <th>{$e_version}</th>
+        <th>{$e_plugin}</th>
+        <th>{$e_options}</th>
+        <th>{$e_webseite}</th>
+        <th>{$e_uptodate}</th>
+    </tr>
+    {foreach key=id item=array from=$data}
+    <tr>
+        <td>{$array.name}</td>
+        <td>{$array.version}</td>
+        <td>{$array.file}</td>
+        <td>comming soon</td>
+        <td>
+            <a href="http://dev.bukkit.org/server-mods/{$array.name}/">{$e_dev}</a>
+        </td>
+        <td>{$array.up}</td>
+    </tr>
+    {/foreach}
+</table>
+{else}
+{$show}
+{/if}
+{/if}

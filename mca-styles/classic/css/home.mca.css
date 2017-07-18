@@ -1,0 +1,35 @@
+/**
+ *
+ *
+ * Home tab CSS
+ *
+ *
+ **/
+#dowload_pre > a {
+    font-size: 25pt;
+    padding-bottom: 35px;
+
+}
+
+#info_right {
+
+    text-align: center;
+    font-size: 35pt;
+    margin-right: 5%;
+    line-height: 85px;
+}
+
+#dowload_content {
+    border: 1px solid #cccccc;
+}
+
+.Row:first-child .Cell:first-child .content > a {
+    font-size: 30pt;
+}
+
+.crayon-plain-tag {
+    background: none repeat scroll 0 0 #e9e9e9 !important;
+    border: 1px solid #cccccc;
+    margin: 15px;
+    padding: 5px;
+}

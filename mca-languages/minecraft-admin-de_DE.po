@@ -1,0 +1,1362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Minecraft Admin v0.8.3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-11-15 14:42:17+0000\n"
+"Last-Translator: alex <alexander.lindner@profenter.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: mca-classes/functions.class.php:63
+#@ minecraft-admin
+msgid "Here you can set how much RAM (memory) is used by Minecraft. If you do not know how much you have, ask your hoster. If you do not know how much memory is reasonable, leave the default value of &bdquo;1024&rdquo;"
+msgstr ""
+"Hier kannst du einstellen, wie viel RAM(Arbeitsspeicher) von Minecraft benutzt werden. Falls du nicht weißt, wie viel du hast, frage deinen Hoster. Falls du nicht weiß, wie viel Arbeitspeicher angemessen ist, lasse den Standartwert von &bdquo;1024&rdquo;\n"
+"\t\t\t\t"
+
+#: mca-classes/functions.class.php:66
+#@ minecraft-admin
+msgid "You can find the minecraft server under this path."
+msgstr "Du findest den Minecraft Server unter diesem Pfad."
+
+#: mca-classes/functions.class.php:69
+#@ minecraft-admin
+msgid "Gebe hier den Name der Datei ein, die zum Start des Servers ausgeführt werden soll."
+msgstr ""
+
+#: mca-classes/functions.class.php:72
+#@ minecraft-admin
+msgid "Enter the names of WordPress users (separated by commas) that have access to this interface. Administrators always have access."
+msgstr ""
+"Gebe hier die Namen der Wordpress Nutzer ein (durch ein Komma getrennt), die auf dieses Interface Zugriff haben sollen. Administratoren haben immer Zugriff.\n"
+"\t\t\t\t\t\t"
+
+#: mca-classes/functions.class.php:75
+#@ minecraft-admin
+msgid "Enter the number of logs you want to view."
+msgstr "Gebe hier die Anzahl an Logs an, die du angezeigt bekommen möchtest."
+
+#: mca-classes/functions.class.php:78
+#@ minecraft-admin
+msgid "You can find the minecraft backup directory under this path"
+msgstr "Du findest den Minecraft Backup Ordner unter diesem Pfad."
+
+#: mca-classes/functions.class.php:81
+#@ minecraft-admin
+msgid "You can choose whether you want an original Minecraft server or a Bukkit server."
+msgstr "Hier kannst du auswählen, ob du einen orginal Minecraft Server oder einen Bukkit Server willst."
+
+#: mca-classes/functions.class.php:102
+#, php-format
+#@ minecraft-admin
+msgid "The file '%s' was succssesfull created.<br>"
+msgstr "Die Datei '%s' wurde erfolgreich erstellt. <br>"
+
+#: mca-pages/servers-befehle.page.php:297
+#: mca-pages/servers-cronjobs.page.php:265
+#: mca-pages/servers-cronjobs.page.php:342
+#@ minecraft-admin
+msgid "stop"
+msgstr "Stoppe"
+
+#: loader.php:373
+#: loader.php:406
+#: mca-pages/home.page.php:183
+#: mca-pages/install.page.php:55
+#: mca-pages/ueber.page.php:83
+#@ minecraft-admin
+msgid "Minecraft Admin"
+msgstr "Minecraft Admin"
+
+#: loader.php:373
+#: loader.php:406
+#: mca-pages/servers-filebrowser.page.php:35
+#@ minecraft-admin
+msgid "Minecraft"
+msgstr "Minecraft"
+
+#: mca-classes/widget.class.php:53
+#: mca-pages/servers-befehle.page.php:209
+#@ minecraft-admin
+msgid "The following users are online:"
+msgstr "Die folgenden User sind Online:"
+
+#: mca-classes/widget.class.php:68
+#: mca-pages/servers-befehle.page.php:212
+#@ minecraft-admin
+msgid "It seems to be no user are online :("
+msgstr "Es scheint, dass keiner Online ist :("
+
+#: mca-pages/install.page.php:79
+#: mca-pages/servers-befehle.page.php:296
+#: mca-pages/servers-cronjobs.page.php:262
+#: mca-pages/servers-cronjobs.page.php:341
+#@ minecraft-admin
+msgid "start"
+msgstr "Starte"
+
+#: mca-pages/servers-befehle.page.php:298
+#: mca-pages/servers-cronjobs.page.php:268
+#: mca-pages/servers-cronjobs.page.php:343
+#@ minecraft-admin
+msgid "restart"
+msgstr "Neustarten"
+
+#: mca-pages/servers-befehle.page.php:295
+#: mca-pages/servers-plugins.page.php:257
+#@ minecraft-admin
+msgid "send"
+msgstr "Senden"
+
+#: mca-classes/filebrowser.class.php:31
+#@ minecraft-admin
+msgid "The directory was deleted successfully."
+msgstr "Der Ordner wurde erfolgreich gelöscht."
+
+#: mca-classes/filebrowser.class.php:34
+#@ minecraft-admin
+msgid "Error: This isn't a directory"
+msgstr "Error: Das ist kein Ordner"
+
+#: mca-classes/filebrowser.class.php:37
+#@ minecraft-admin
+msgid "Error: The directory wasn't deleted successfully. Reason: unknown"
+msgstr "Error: Der Ordner konnte nicht gelöscht werden. Grund: unbekannt"
+
+#: mca-classes/filebrowser.class.php:40
+#@ minecraft-admin
+msgid "Error: The directory wasn't deleted successfully. Reason: filetype unknown"
+msgstr "Error: Der Ordner konnte nicht gelöscht werden. Grund: Dateitype unbekannt"
+
+#: mca-classes/filebrowser.class.php:43
+#@ minecraft-admin
+msgid "Error: The directory wasn't deleted successfully. Reason: The delete function seems to be incorrect. Inform the author."
+msgstr "Error: Der Ordner konnte nicht gelöscht werden. Grund: Die Löschfunction scheint fehlerhaft zu sein, informiere die Autor."
+
+#: mca-pages/servers-filebrowser.page.php:38
+#@ minecraft-admin
+msgid "back"
+msgstr "zurück"
+
+#: mca-pages/servers-cronjobs.page.php:344
+#: mca-pages/servers-filebrowser.page.php:39
+#@ minecraft-admin
+msgid "Save changes"
+msgstr "Speichere Ämderungen"
+
+#: mca-pages/home.page.php:182
+#: mca-pages/servers-cronjobs.page.php:326
+#: mca-pages/servers-filebrowser.page.php:36
+#@ minecraft-admin
+msgid "Delete"
+msgstr "Lösche"
+
+#: mca-pages/servers-befehle.page.php:268
+#: mca-pages/servers-befehle.page.php:279
+#: mca-pages/servers-filebrowser.page.php:37
+#@ minecraft-admin
+msgid "rename"
+msgstr "umbennen"
+
+#: mca-classes/filebrowser.class.php:151
+#@ minecraft-admin
+msgid "Last access"
+msgstr "Letzter Zugriff"
+
+#: mca-classes/filebrowser.class.php:155
+#@ minecraft-admin
+msgid "size"
+msgstr "Größe"
+
+#: mca-classes/filebrowser.class.php:159
+#@ minecraft-admin
+msgid "last change"
+msgstr "letzte Änderung"
+
+#: mca-pages/servers-filebrowser.page.php:44
+#@ minecraft-admin
+msgid "create"
+msgstr "erstelle"
+
+#: mca-pages/servers-filebrowser.page.php:43
+#@ minecraft-admin
+msgid "Choose a file to be uploaded"
+msgstr "Wähle eine Datei, die hochgeladen werden soll."
+
+#: mca-pages/servers-filebrowser.page.php:42
+#@ minecraft-admin
+msgid "Upload file"
+msgstr "Lade Datei hoch"
+
+#: mca-pages/servers-filebrowser.page.php:40
+#@ minecraft-admin
+msgid "Delete actually directory."
+msgstr "Lösche Aktuelles Verzeichnis."
+
+#: mca-pages/servers-filebrowser.page.php:41
+#@ minecraft-admin
+msgid "rename actually directory."
+msgstr "benenne das aktuelles Verzeichnis um"
+
+#: mca-pages/servers-cronjobs.page.php:149
+#@ minecraft-admin
+msgid "recurring action was successfully created"
+msgstr "Wiederkehrende Aktion wurde erfolgreich erstellt."
+
+#: mca-pages/servers-cronjobs.page.php:333
+#@ minecraft-admin
+msgid "Id"
+msgstr "Id"
+
+#: mca-pages/servers-cronjobs.page.php:334
+#@ minecraft-admin
+msgid "minute"
+msgstr "Minute"
+
+#: mca-pages/servers-cronjobs.page.php:335
+#@ minecraft-admin
+msgid "hour"
+msgstr "Stunde"
+
+#: mca-pages/servers-cronjobs.page.php:336
+#@ minecraft-admin
+msgid "day"
+msgstr "Tag"
+
+#: mca-pages/servers-cronjobs.page.php:337
+#@ minecraft-admin
+msgid "month"
+msgstr "Monat"
+
+#: mca-pages/servers-cronjobs.page.php:338
+#@ minecraft-admin
+msgid "weeksday"
+msgstr "Wochentags"
+
+#: mca-pages/servers-cronjobs.page.php:339
+#@ minecraft-admin
+msgid "command"
+msgstr "Befehl"
+
+#: mca-pages/servers-cronjobs.page.php:340
+#@ minecraft-admin
+msgid "delete"
+msgstr "Lösche"
+
+#: mca-pages/servers-cronjobs.page.php:253
+#@ minecraft-admin
+msgid "minecraft command"
+msgstr "Minecraft Befehl"
+
+#: mca-pages/servers-befehle.page.php:301
+#: mca-pages/servers-cronjobs.page.php:271
+#: mca-pages/servers-cronjobs.page.php:367
+#@ minecraft-admin
+msgid "backup"
+msgstr "Backup"
+
+#: mca-pages/servers-cronjobs.page.php:372
+#@ minecraft-admin
+msgid "create recurring action"
+msgstr "erstelle wiederkehrende Aktion"
+
+#: mca-pages/servers-cronjobs.page.php:373
+#@ minecraft-admin
+msgid "you can selcet multiple selections."
+msgstr "du kannst  mehrfach auswählen."
+
+#: mca-pages/servers-cronjobs.page.php:158
+#: mca-pages/servers-cronjobs.page.php:371
+#@ minecraft-admin
+msgid "every minute"
+msgstr "jede Minute"
+
+#: mca-pages/servers-cronjobs.page.php:160
+#: mca-pages/servers-cronjobs.page.php:370
+#@ minecraft-admin
+msgid "every hour"
+msgstr "jede Stunde"
+
+#: mca-pages/servers-cronjobs.page.php:162
+#: mca-pages/servers-cronjobs.page.php:365
+#@ minecraft-admin
+msgid "every day"
+msgstr "jeden Tag"
+
+#: mca-pages/servers-cronjobs.page.php:177
+#: mca-pages/servers-cronjobs.page.php:345
+#@ minecraft-admin
+msgid "January"
+msgstr "Januar"
+
+#: mca-pages/servers-cronjobs.page.php:180
+#: mca-pages/servers-cronjobs.page.php:346
+#@ minecraft-admin
+msgid "February"
+msgstr "Februar"
+
+#: mca-pages/servers-cronjobs.page.php:183
+#: mca-pages/servers-cronjobs.page.php:347
+#@ minecraft-admin
+msgid "March"
+msgstr "März"
+
+#: mca-pages/servers-cronjobs.page.php:186
+#: mca-pages/servers-cronjobs.page.php:348
+#@ minecraft-admin
+msgid "April"
+msgstr "April"
+
+#: mca-pages/servers-cronjobs.page.php:189
+#: mca-pages/servers-cronjobs.page.php:349
+#@ minecraft-admin
+msgid "May"
+msgstr "Mai"
+
+#: mca-pages/servers-cronjobs.page.php:192
+#: mca-pages/servers-cronjobs.page.php:350
+#@ minecraft-admin
+msgid "June"
+msgstr "Juni"
+
+#: mca-pages/servers-cronjobs.page.php:195
+#: mca-pages/servers-cronjobs.page.php:351
+#@ minecraft-admin
+msgid "July"
+msgstr "Juli"
+
+#: mca-pages/servers-cronjobs.page.php:198
+#: mca-pages/servers-cronjobs.page.php:352
+#@ minecraft-admin
+msgid "August"
+msgstr "August"
+
+#: mca-pages/servers-cronjobs.page.php:201
+#: mca-pages/servers-cronjobs.page.php:353
+#@ minecraft-admin
+msgid "September"
+msgstr "September"
+
+#: mca-pages/servers-cronjobs.page.php:204
+#: mca-pages/servers-cronjobs.page.php:354
+#@ minecraft-admin
+msgid "October"
+msgstr "Oktober"
+
+#: mca-pages/servers-cronjobs.page.php:207
+#: mca-pages/servers-cronjobs.page.php:355
+#@ minecraft-admin
+msgid "November"
+msgstr "November"
+
+#: mca-pages/servers-cronjobs.page.php:210
+#: mca-pages/servers-cronjobs.page.php:356
+#@ minecraft-admin
+msgid "December"
+msgstr "Dezember"
+
+#: mca-pages/servers-cronjobs.page.php:166
+#: mca-pages/servers-cronjobs.page.php:366
+#@ minecraft-admin
+msgid "every month"
+msgstr "jeden Monat"
+
+#: mca-pages/servers-cronjobs.page.php:222
+#: mca-pages/servers-cronjobs.page.php:357
+#@ minecraft-admin
+msgid "Sundays"
+msgstr "Sonntag"
+
+#: mca-pages/servers-cronjobs.page.php:225
+#: mca-pages/servers-cronjobs.page.php:358
+#@ minecraft-admin
+msgid "Mondays"
+msgstr "Montag"
+
+#: mca-pages/servers-cronjobs.page.php:228
+#: mca-pages/servers-cronjobs.page.php:359
+#@ minecraft-admin
+msgid "Tuesdays"
+msgstr "Dienstag"
+
+#: mca-pages/servers-cronjobs.page.php:231
+#: mca-pages/servers-cronjobs.page.php:360
+#@ minecraft-admin
+msgid "Wednesdays"
+msgstr "Mittwoch"
+
+#: mca-pages/servers-cronjobs.page.php:234
+#: mca-pages/servers-cronjobs.page.php:361
+#@ minecraft-admin
+msgid "Thursdays"
+msgstr "Donnerstag"
+
+#: mca-pages/servers-cronjobs.page.php:237
+#: mca-pages/servers-cronjobs.page.php:362
+#@ minecraft-admin
+msgid "Fridays"
+msgstr "Freitag"
+
+#: mca-pages/servers-cronjobs.page.php:240
+#: mca-pages/servers-cronjobs.page.php:363
+#@ minecraft-admin
+msgid "Saturdays"
+msgstr "Sammstag"
+
+#: mca-pages/servers-cronjobs.page.php:164
+#: mca-pages/servers-cronjobs.page.php:364
+#@ minecraft-admin
+msgid "on all weekdays"
+msgstr "an allen Wochentagen"
+
+#: mca-pages/servers-befehle.page.php:327
+#@ minecraft-admin
+msgid "Command"
+msgstr "Befehl"
+
+#: mca-classes/filebrowser.class.php:147
+#: mca-pages/home.page.php:177
+#: mca-pages/servers-settings.page.php:74
+#@ minecraft-admin
+msgid "Name"
+msgstr "Name"
+
+#: mca-pages/install.page.php:60
+#@ minecraft-admin
+msgid "Setup"
+msgstr "Setup"
+
+#: mca-pages/home.page.php:179
+#@ minecraft-admin
+msgid "Minecraft server"
+msgstr "Minecraft server"
+
+#: mca-pages/home.page.php:180
+#@ minecraft-admin
+msgid "Create a new Minecraft Server"
+msgstr "Erstelle einen neuen Minecraft Server"
+
+#: mca-pages/home.page.php:178
+#@ minecraft-admin
+msgid "Minecraft Servers"
+msgstr "Minecraft Servers"
+
+#: mca-pages/home.page.php:176
+#@ minecraft-admin
+msgid "Delete link"
+msgstr "Lösche Link"
+
+#: mca-pages/home.page.php:181
+#@ minecraft-admin
+msgid "Choose"
+msgstr "Auswählen"
+
+#: mca-classes/widget.class.php:31
+#@ minecraft-admin
+msgid "Minecraft Server Status"
+msgstr "Minecraft Server Status"
+
+#: mca-classes/widget.class.php:77
+#@ minecraft-admin
+msgid "runs"
+msgstr "läuft"
+
+#: mca-classes/widget.class.php:134
+#@ minecraft-admin
+msgid "Server:"
+msgstr "Server:"
+
+#: loader.php:107
+#@ minecraft-admin
+msgid "MC-ERROR: The MCA class file  couldn't be load. Please check your path settings."
+msgstr "MC-ERROR: Die MCA class datei wurde nicht gefunden. Überprüfe deine Pfadeinstellungen."
+
+#: loader.php:180
+#: loader.php:239
+#@ minecraft-admin
+msgid "MC-ERROR: The MCA page file  couldn't be load. Please check your path settings."
+msgstr "MC-ERROR: Die MCA Seiten Datei wurde nicht gefunden. Überprüfe deine Pfadeinstellungen."
+
+#: mca-classes/pages.class.php:47
+#@ minecraft-admin
+msgid "No content"
+msgstr "Kein Inhalt"
+
+#: mca-pages/install.page.php:74
+#@ minecraft-admin
+msgid "install now"
+msgstr "Jetzt installieren"
+
+#: mca-pages/ueber.page.php:76
+#@ minecraft-admin
+msgid "Plugin"
+msgstr "Plugin"
+
+#: mca-pages/ueber.page.php:77
+#@ minecraft-admin
+msgid "autor"
+msgstr "Author"
+
+#: mca-pages/ueber.page.php:78
+#@ minecraft-admin
+msgid "Helpvideo"
+msgstr "Hilfsvideo"
+
+#: mca-pages/ueber.page.php:79
+#@ minecraft-admin
+msgid "Debuginfos"
+msgstr "Debuginfos"
+
+#: loader.php:102
+#@ minecraft-admin
+msgid "commands"
+msgstr "Befehle"
+
+#: loader.php:103
+#@ minecraft-admin
+msgid "filebrowser"
+msgstr "Filebrowser"
+
+#: loader.php:108
+#@ minecraft-admin
+msgid "cronjobs"
+msgstr "Cronjobs"
+
+#: loader.php:109
+#: loader.php:111
+#@ minecraft-admin
+msgid "settings"
+msgstr "Einstellungen"
+
+#: mca-pages/install.page.php:77
+#: mca-pages/servers-plugins.page.php:236
+#: mca-pages/servers-plugins.page.php:252
+#@ minecraft-admin
+msgid "install"
+msgstr "installieren"
+
+#: mca-classes/functions.class.php:84
+#@ minecraft-admin
+msgid "Enter here a name for your server. It's only for you."
+msgstr "Hier einen Namen für den Server eingeben. Dieser ist nur für dich."
+
+#: mca-pages/home.page.php:190
+#@ minecraft-admin
+msgid "Change name"
+msgstr "Name ändern"
+
+#: mca-pages/install.page.php:78
+#@ minecraft-admin
+msgid "finish"
+msgstr "fertig"
+
+#: mca-pages/install.page.php:80
+#@ minecraft-admin
+msgid "step"
+msgstr "Schritt"
+
+#: mca-pages/install.page.php:160
+#@ minecraft-admin
+msgid "Log in to your server as root and execute the following command:"
+msgstr "Logge dich als root auf deinem Server ein und führe folgendem Befehl aus:"
+
+#: mca-pages/install.page.php:161
+#, php-format
+#@ minecraft-admin
+msgid "If you need help visit the authors website %s"
+msgstr "Wenn du Hilfe brauchst besuche die Webseite des Authors %s"
+
+#: mca-pages/install.page.php:164
+#@ minecraft-admin
+msgid "It seems to be that Minecraft Admin was already installed."
+msgstr "Es scheint so als wäre Minecraft Admin bereits installiert."
+
+#: mca-pages/install.page.php:174
+#@ minecraft-admin
+msgid "Yeeeeessssss. You finished the installation. You can now start using this plugin."
+msgstr "Endlich. Du hast die Installation fertiggestellt. Du kannst nun beginn dieses Plugin zu nutzen."
+
+#: mca-pages/install.page.php:291
+#@ minecraft-admin
+msgid "It seems to be that you don't finished the installation. Go back an follow the guid."
+msgstr "Du hast die Installation nicht fertiggestellt. Geh zurück und folge den Anweisungen."
+
+#: loader.php:392
+#: loader.php:410
+#: mca-pages/servers-settings.page.php:52
+#@ minecraft-admin
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: mca-pages/servers-settings.page.php:55
+#@ minecraft-admin
+msgid "Path"
+msgstr "Pfad"
+
+#: mca-pages/servers-settings.page.php:59
+#@ minecraft-admin
+msgid "Logs"
+msgstr "Logs"
+
+#: mca-pages/servers-settings.page.php:62
+#@ minecraft-admin
+msgid "RAM"
+msgstr "RAM"
+
+#: mca-pages/servers-settings.page.php:65
+#@ minecraft-admin
+msgid "Backup"
+msgstr "Backup"
+
+#: mca-pages/servers-settings.page.php:69
+#@ minecraft-admin
+msgid "Server"
+msgstr "Server"
+
+#: mca-pages/settings.page.php:88
+#@ minecraft-admin
+msgid "Users"
+msgstr "Nutzer"
+
+#: mca-pages/servers-settings.page.php:79
+#@ minecraft-admin
+msgid "save changes"
+msgstr "Speichere Änderungen"
+
+#: mca-classes/widget.class.php:83
+#@ minecraft-admin
+msgid "Join it now on"
+msgstr "Trette nun bei unter"
+
+#: mca-pages/install.page.php:63
+#@ minecraft-admin
+msgid ""
+"Welcome to the installer of the WordPress plugin \"Minecraft Admin\".<br />\n"
+"\t\t\t\t\t\t\t\t\t\t<br />\n"
+"\t\t\t\t\t\t\t\t\t\t<br />\n"
+"\t\t\t\t\t\t\t\t\t\tIn the following you'll go through a few steps to install Minecraft Admin.<br />\n"
+"\t\t\t\t\t\t\t\t\t\tPlease follow the installation and do not break before finishing, otherwise errors may occur.<br />\n"
+"\t\t\t\t\t\t\t\t\t\t<br />\n"
+"\t\t\t\t\t\t\t\t\t\tHave fun now,<br />\n"
+"\t\t\t\t\t\t\t\t\t\tProfenter Systems<br />\n"
+"\t\t\t\t\t\t\t\t\t\t(developer of the plugin)"
+msgstr ""
+"Willkommen zum Installer des Wordpress Plugins  \"Minecraft Admin\".<br />\n"
+"\t\t\t\t\t\t\t\t\t\t<br />\n"
+"\t\t\t\t\t\t\t\t\t\t<br />\n"
+"\t\t\t\t\t\t\t\t\t\tIm folgendem wirst du ein paar Schritte durchführen müssen um Minecraft Admin zu installieren.<br />\n"
+"\t\t\t\t\t\t\t\t\t\tFolge nun den Anweisung und breche nicht ab, sonst können Fehler auftreten.<br />\n"
+"\t\t\t\t\t\t\t\t\t\t<br />\n"
+"\t\t\t\t\t\t\t\t\t\tHab nun Spaß,<br />\n"
+"\t\t\t\t\t\t\t\t\t\tProfenter Systems<br />\n"
+"\t\t\t\t\t\t\t\t\t\t(Entwickler dieses Plugins)"
+
+#: mca-pages/install.page.php:90
+#@ minecraft-admin
+msgid "Minecraft Admin is released under the <a href=\"http://profenter.de/profenter/lizenzierung/psl-1-1\">PSL 1.1</a>."
+msgstr "Minecraft Admin wurde unter der <a href=\"http://profenter.de/profenter/lizenzierung/psl-1-1\">PSL 1.1</a> freigegeben."
+
+#: loader.php:379
+#@ minecraft-admin
+msgid "Home"
+msgstr "Home"
+
+#: loader.php:387
+#@ minecraft-admin
+msgid "About"
+msgstr "Über"
+
+#: loader.php:383
+#@ minecraft-admin
+msgid "Servers"
+msgstr "Server"
+
+#: mca-pages/home.page.php:109
+#: mca-pages/home.page.php:141
+#@ minecraft-admin
+msgid "No items"
+msgstr "Keine Beiträge"
+
+#: mca-pages/home.page.php:118
+#@ minecraft-admin
+msgid "Same version. No update available."
+msgstr "Gleiche Version. Kein Update vorhanden."
+
+#: mca-pages/home.page.php:121
+#@ minecraft-admin
+msgid "You can update if you want."
+msgstr "Du kannst updaten wenn du willst."
+
+#: mca-pages/home.page.php:124
+#@ minecraft-admin
+msgid "You are newer? What did you do?"
+msgstr "Du bist neuer? Was hast du gemacht?"
+
+#: mca-pages/home.page.php:129
+#: mca-pages/home.page.php:149
+#, php-format
+#@ minecraft-admin
+msgid "Posted %s"
+msgstr "Gepostet %s"
+
+#: mca-pages/home.page.php:175
+#@ minecraft-admin
+msgid "newst version available"
+msgstr "Neuste Version verfügbar"
+
+#: mca-pages/home.page.php:189
+#@ minecraft-admin
+msgid "create a new server"
+msgstr "Erstelle einen Server"
+
+#: mca-pages/install.page.php:81
+#@ minecraft-admin
+msgid "This new version doesn't import old settings of fewer versions."
+msgstr "Diese Version importiet keine Einstellungen von Version 0.6.5."
+
+#: mca-pages/servers-befehle.page.php:300
+#@ minecraft-admin
+msgid "kill"
+msgstr "Töten"
+
+#: mca-pages/servers-plugins.page.php:132
+#@ minecraft-admin
+msgid "There aren't downloads anymore."
+msgstr "Es sind keine Downloads vorhanden."
+
+#: mca-pages/servers-plugins.page.php:135
+#: mca-pages/servers-plugins.page.php:141
+#@ minecraft-admin
+msgid "The plugin wasn't found on bukkit.org. We can't update it automatically."
+msgstr "Dieses Plugin wurde nicht auf bukkit.org gefunden sodass wir es nicht automatisch updaten können"
+
+#: mca-pages/servers-plugins.page.php:198
+#@ minecraft-admin
+msgid "please update"
+msgstr "Bitte update."
+
+#: mca-pages/servers-plugins.page.php:258
+#@ minecraft-admin
+msgid "plugin name"
+msgstr "Plugin Name"
+
+#: mca-pages/servers-plugins.page.php:262
+#@ minecraft-admin
+msgid "clear cache"
+msgstr "Lösche Cache"
+
+#: mca-pages/servers-plugins.page.php:263
+#@ minecraft-admin
+msgid "name"
+msgstr "Name"
+
+#: mca-pages/servers-plugins.page.php:264
+#@ minecraft-admin
+msgid "version"
+msgstr "Version"
+
+#: mca-pages/servers-plugins.page.php:265
+#@ minecraft-admin
+msgid "options"
+msgstr "Optionen"
+
+#: mca-pages/servers-plugins.page.php:266
+#@ minecraft-admin
+msgid "plugin file"
+msgstr "Plugin Datei"
+
+#: mca-pages/servers-plugins.page.php:267
+#@ minecraft-admin
+msgid "Bukkit website"
+msgstr "Bukkit Webseite"
+
+#: mca-pages/servers-plugins.page.php:268
+#@ minecraft-admin
+msgid "Bukkit Dev"
+msgstr "Bukkit Dev"
+
+#: mca-pages/servers-plugins.page.php:269
+#@ minecraft-admin
+msgid "Up-To-Date?"
+msgstr "Aktuell?"
+
+#: mca-pages/servers-settings.page.php:53
+#@ minecraft-admin
+msgid "Settings updated."
+msgstr "Einstellungen gespeichert."
+
+#: mca-classes/functions.class.php:105
+#, php-format
+#@ minecraft-admin
+msgid "The directory isn't writeable. Create the file '%s' into the directory '%s' and copy the following text into this file.<br><textarea>%s</textarea>"
+msgstr "Das Verzeichniss ist nicht beschreibbar. Erstelle '%s' im Verzeichniss '%s' und füge folgenden Code in die Datei ein: <br> <textarea>%s</textarea>"
+
+#: mca-pages/home.page.php:161
+#@ minecraft-admin
+msgid "improved design"
+msgstr "Erneuerstes Design"
+
+#: mca-pages/home.page.php:162
+#@ minecraft-admin
+msgid "new command interface"
+msgstr "neue Kommandooberfläche"
+
+#: mca-pages/home.page.php:163
+#@ minecraft-admin
+msgid "added a lot of new options to command interface"
+msgstr "viele Optionen zur Komandooberfläche hinzugefügt"
+
+#: mca-pages/home.page.php:164
+#@ minecraft-admin
+msgid "added new boxes at the start screen"
+msgstr "neue Boxen zum Start Bildschrim hinzugefügt"
+
+#: mca-pages/home.page.php:165
+#@ minecraft-admin
+msgid "new uninstaller"
+msgstr "neuer Uninstaller"
+
+#: mca-pages/home.page.php:166
+#@ minecraft-admin
+msgid "new installer"
+msgstr "neuer Installer"
+
+#: mca-pages/home.page.php:172
+#@ minecraft-admin
+msgid "donate"
+msgstr "Spenden"
+
+#: mca-pages/home.page.php:173
+#@ minecraft-admin
+msgid "new in this version"
+msgstr "Neu in dieser Version"
+
+#: mca-pages/home.page.php:174
+#@ minecraft-admin
+msgid "Minecraft Admin is free and should stay free.<br /> For this we need your help!<br /> We spend a lot of time and expensive resources to develop Minecraft Admin.<br /> Help us by donating us a small contribution.<br /> Every little donation helps to develop Minecraft Admin and keeps it free."
+msgstr "Minecraft Admin ist kostenlos und wird es auch immer bleiben.<br /> Doch investieren wir viel Zeit und Ressourcen, die nicht gerade billig sind.<br /> Hilf uns, indem du uns einen kleinen Beitrag spendest.<br /> Jeder noch so kleine Beitrag hilft uns, Minecraft Admin am Leben zu halten."
+
+#: mca-pages/home.page.php:191
+#@ minecraft-admin
+msgid "Do you really want remove this server? <a class=\"ja\">Yes!</a><a class=\"nein\">No</a>"
+msgstr "Möchtest du wirklich diesen Server entfernen. <a class=\"ja\">Ja!</a><a class=\"nein\">Nein</a>"
+
+#: mca-pages/servers-befehle.page.php:299
+#@ minecraft-admin
+msgid "reload"
+msgstr "Neuladen"
+
+#: mca-pages/servers-befehle.page.php:302
+#@ minecraft-admin
+msgid "Save worlds"
+msgstr "Welten speichern"
+
+#: mca-pages/servers-befehle.page.php:303
+#@ minecraft-admin
+msgid "add op"
+msgstr "OP hinzufügen"
+
+#: mca-pages/servers-befehle.page.php:304
+#: mca-pages/servers-cronjobs.page.php:381
+#@ minecraft-admin
+msgid "add to whitelist"
+msgstr "zur Whitelist hinzufügen"
+
+#: mca-pages/servers-befehle.page.php:305
+#@ minecraft-admin
+msgid "Add a user as op"
+msgstr "Einen Nutzer als OP eintragen"
+
+#: mca-pages/servers-befehle.page.php:306
+#@ minecraft-admin
+msgid "Add a user to whitelist"
+msgstr "Einen Nutzer zur Whitelist hinzufügen"
+
+#: mca-pages/servers-befehle.page.php:307
+#: mca-pages/servers-befehle.page.php:319
+#@ minecraft-admin
+msgid "on"
+msgstr "an"
+
+#: mca-pages/servers-befehle.page.php:308
+#: mca-pages/servers-befehle.page.php:320
+#@ minecraft-admin
+msgid "off"
+msgstr "aus"
+
+#: mca-pages/servers-befehle.page.php:309
+#@ minecraft-admin
+msgid "Should whitelist be on or off?"
+msgstr "Soll die whitelist an oder aus sein?"
+
+#: mca-pages/servers-befehle.page.php:310
+#@ minecraft-admin
+msgid "the Minecraft Server have to run"
+msgstr "Der Minecraft Server  muss laufen."
+
+#: mca-pages/servers-befehle.page.php:311
+#@ minecraft-admin
+msgid "change the gamemode"
+msgstr "ändere den gamemode"
+
+#: mca-pages/servers-befehle.page.php:312
+#@ minecraft-admin
+msgid "creative"
+msgstr "Kreativ"
+
+#: mca-pages/servers-befehle.page.php:313
+#@ minecraft-admin
+msgid "survival"
+msgstr "Überlebensmodus"
+
+#: mca-pages/servers-befehle.page.php:314
+#@ minecraft-admin
+msgid "player"
+msgstr "Spieler"
+
+#: mca-pages/servers-befehle.page.php:315
+#@ minecraft-admin
+msgid "ip"
+msgstr "IP"
+
+#: mca-pages/servers-befehle.page.php:316
+#@ minecraft-admin
+msgid "toggle downfall"
+msgstr "Regen umschalten"
+
+#: mca-pages/servers-befehle.page.php:317
+#: mca-pages/servers-cronjobs.page.php:380
+#@ minecraft-admin
+msgid "add to blacklist"
+msgstr "zur blacklist hinzufügen"
+
+#: mca-pages/servers-befehle.page.php:318
+#@ minecraft-admin
+msgid "Add a user to blacklist"
+msgstr "Einen Nutzer zur Blacklist hinzufügen"
+
+#: mca-pages/servers-befehle.page.php:321
+#@ minecraft-admin
+msgid "Should blacklist be on or off?"
+msgstr "Soll die Blacklist an oder aus sein?"
+
+#: mca-pages/servers-befehle.page.php:322
+#@ minecraft-admin
+msgid "Kick!"
+msgstr "Kick!"
+
+#: mca-pages/servers-befehle.page.php:323
+#@ minecraft-admin
+msgid "set time"
+msgstr "setze Zeit"
+
+#: mca-pages/servers-befehle.page.php:324
+#@ minecraft-admin
+msgid "say to all"
+msgstr "sage zu allen"
+
+#: mca-pages/servers-befehle.page.php:325
+#@ minecraft-admin
+msgid "do it"
+msgstr "Tu es"
+
+#: mca-pages/servers-befehle.page.php:326
+#@ minecraft-admin
+msgid "bring it up"
+msgstr "erhöhe ihn"
+
+#: mca-pages/servers-befehle.page.php:329
+#@ minecraft-admin
+msgid "Basic"
+msgstr "Basis"
+
+#: mca-pages/servers-befehle.page.php:330
+#: mca-pages/servers-cronjobs.page.php:377
+#@ minecraft-admin
+msgid "Commands"
+msgstr "Kommandos"
+
+#: mca-pages/servers-befehle.page.php:331
+#: mca-pages/servers-cronjobs.page.php:280
+#: mca-pages/servers-cronjobs.page.php:378
+#@ minecraft-admin
+msgid "Say"
+msgstr "Sage"
+
+#: mca-pages/servers-befehle.page.php:332
+#: mca-pages/servers-cronjobs.page.php:379
+#@ minecraft-admin
+msgid "Time"
+msgstr "Zeit"
+
+#: mca-pages/servers-befehle.page.php:333
+#@ minecraft-admin
+msgid "OP"
+msgstr "OP"
+
+#: mca-pages/servers-befehle.page.php:334
+#@ minecraft-admin
+msgid "Blacklist"
+msgstr "Blacklist"
+
+#: mca-pages/servers-befehle.page.php:335
+#@ minecraft-admin
+msgid "Whitelist"
+msgstr "Whitelist"
+
+#: mca-pages/servers-befehle.page.php:336
+#: mca-pages/servers-cronjobs.page.php:384
+#@ minecraft-admin
+msgid "Gamemode"
+msgstr "Gamemode"
+
+#: mca-pages/servers-befehle.page.php:337
+#: mca-pages/servers-cronjobs.page.php:301
+#: mca-pages/servers-cronjobs.page.php:385
+#@ minecraft-admin
+msgid "Kick"
+msgstr "Kick"
+
+#: mca-pages/servers-befehle.page.php:338
+#: mca-pages/servers-cronjobs.page.php:386
+#@ minecraft-admin
+msgid "Toggle downfall"
+msgstr "Regen umschalten"
+
+#: mca-pages/servers-befehle.page.php:339
+#: mca-pages/servers-cronjobs.page.php:295
+#: mca-pages/servers-cronjobs.page.php:387
+#@ minecraft-admin
+msgid "Give"
+msgstr "Gebe"
+
+#: mca-pages/servers-befehle.page.php:340
+#: mca-pages/servers-cronjobs.page.php:298
+#: mca-pages/servers-cronjobs.page.php:388
+#@ minecraft-admin
+msgid "XP"
+msgstr "XP"
+
+#: mca-pages/settings.page.php:92
+#@ minecraft-admin
+msgid "Change style"
+msgstr "Ändere Design"
+
+#: mca-pages/settings.page.php:93
+#@ minecraft-admin
+msgid "Change the style of Minecraft Admin. The 'default' style was create by the developers of Minecraft Admin. Using an other style can break Minecraft Admin."
+msgstr "Ändere das Design von Minecraft Admin. Das 'default' Design wurde von den Entwicklern von Minecraft Admin erstellt. Das Nutzen eines andere Design kann Minecraft Admin zerstören."
+
+#: mca-pages/settings.page.php:95
+#@ minecraft-admin
+msgid "Settings removed correctly."
+msgstr "Einstellungen korrekt entfernt."
+
+#: mca-pages/install.page.php:57
+#@ minecraft-admin
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: mca-pages/install.page.php:58
+#@ minecraft-admin
+msgid "Redhat"
+msgstr "Redhat"
+
+#: mca-pages/install.page.php:59
+#@ minecraft-admin
+msgid "Others"
+msgstr "Sonstige"
+
+#: mca-pages/install.page.php:72
+#@ minecraft-admin
+msgid "You can get help at profenter.de"
+msgstr "Du bekommst hilfe auf profenter.de"
+
+#: mca-pages/install.page.php:73
+#@ minecraft-admin
+msgid "All checks were successful."
+msgstr "Alle Überprüfungen waren erfolgreich."
+
+#: mca-pages/install.page.php:132
+#@ minecraft-admin
+msgid "The Minecraft Admin folder isn't wirteable. Please change the permissions so the Minecraft Admin folder is wirteable."
+msgstr "Der Minecraft Admin Ordner  ist nicht beschreibbar. Ändere die Rechte dieses Ordner, sodass dieser Ordner beschreibbar ist."
+
+#: mca-pages/install.page.php:155
+#@ minecraft-admin
+msgid "Waiting for installing..."
+msgstr "Warte für die Installation..."
+
+#: mca-pages/install.page.php:169
+#@ minecraft-admin
+msgid "The Minecraft Admin folder isn't writable. Please change the permissions so the Minecraft Admin folder is wirteable."
+msgstr "Der Minecraft Admin Ordner  ist nicht beschreibbar. Ändere die Rechte dieses Ordner, sodass dieser Ordner beschreibbar ist."
+
+#: mca-pages/settings.page.php:81
+#@ minecraft-admin
+msgid "Do you really want to remove all data of Minecraft Admin?"
+msgstr "Willst du wirklich alle Daten von Minecraft Admin entfernen?"
+
+#: mca-pages/settings.page.php:83
+#@ minecraft-admin
+msgid "Run this code to finish uninstalling:"
+msgstr "Führe diesen Code zur Fertigstellung der Deinstallation aus:"
+
+#: mca-pages/settings.page.php:84
+#@ minecraft-admin
+msgid "Waiting for uninstalling..."
+msgstr "Warte für die Deinstallation..."
+
+#: mca-pages/settings.page.php:85
+#@ minecraft-admin
+msgid "Uninstall."
+msgstr "Deinstallieren"
+
+#: mca-pages/settings.page.php:86
+#@ minecraft-admin
+msgid "Fininsh uninstalling. This will remove <b>ALL</b> Data. Take a backup before."
+msgstr "Beende Deinstallation. Dies wird <b>ALLE</b> Daten entfernen. Mache ein Backup vorher."
+
+#: mca-pages/settings.page.php:95
+#@ minecraft-admin
+msgid "Removed all Data. Delete this plugin through the WordPress plugin function. Thank you for using Minecraft Admin."
+msgstr "Entferne alle Daten. Lösche dieses Plugin über die WordPress Plugin Funktion. Danke für's nutzen von Minecraft Admin."
+
+#: loader.php:126
+#@ minecraft-admin
+msgid "Please verfiy that the following programms are installed: rar, unrar, tar"
+msgstr "Bitte überprüfe ob folgende Programme installiert sind:  rar, unrar, tar"
+
+#: mca-classes/filebrowser.class.php:237
+#@ minecraft-admin
+msgid "Ok, saved."
+msgstr "ok, gespeichert."
+
+#: mca-classes/filebrowser.class.php:243
+#@ minecraft-admin
+msgid "Ok, deleted."
+msgstr "ok, gelöscht."
+
+#: mca-classes/filebrowser.class.php:249
+#@ minecraft-admin
+msgid "Ok, downloaded."
+msgstr "Ok, heruntergeladen."
+
+#: mca-classes/filebrowser.class.php:255
+#: mca-classes/filebrowser.class.php:261
+#@ minecraft-admin
+msgid "Ok, created."
+msgstr "ok, erstellt."
+
+#: mca-classes/filebrowser.class.php:273
+#@ minecraft-admin
+msgid "Ok, renamed."
+msgstr "Ok, umbenannt."
+
+#: mca-classes/styles.class.php:36
+#@ minecraft-admin
+msgid "ERROR: Could not load style, using default."
+msgstr "ERROR: Konnte Style nicht laden, benutze default."
+
+#: mca-classes/styles.class.php:38
+#@ minecraft-admin
+msgid "ERROR: Could not load default style."
+msgstr "ERROR: Konnte default Style nicht laden."
+
+#: mca-classes/styles.class.php:54
+#@ minecraft-admin
+msgid "by"
+msgstr "von"
+
+#: mca-pages/install.page.php:61
+#@ minecraft-admin
+msgid "Help"
+msgstr "Hilfe"
+
+#: mca-pages/install.page.php:62
+#@ minecraft-admin
+msgid "Update"
+msgstr "Update"
+
+#: mca-pages/install.page.php:75
+#@ minecraft-admin
+msgid "update now"
+msgstr "Update jetzt"
+
+#: mca-pages/install.page.php:76
+#@ minecraft-admin
+msgid "next"
+msgstr "nächstes"
+
+#: mca-pages/install.page.php:117
+#@ minecraft-admin
+msgid "Download a backup of your Minecraft Files"
+msgstr "Lade ein Backup von deinen Minecraft Dateien herunter."
+
+#: mca-pages/install.page.php:118
+#@ minecraft-admin
+msgid "Update now"
+msgstr "Update jetzt"
+
+#: mca-pages/install.page.php:119
+#, php-format
+#@ minecraft-admin
+msgid ""
+"We've stopped all server and created a backup of your Minecraft files. You can download it, if possible.\n"
+"                                                    If not, the backup archive won't be delete. After this, push the 'Do update now' button.\n"
+"                                                    We move your old Minecraft Files in a temporary dir and start with a fresh installation of MCA. When you\n"
+"                                                    finished this installation we will migrate your old data to the new System.<br><br>Please execute this\n"
+"                                                    command: %s"
+msgstr ""
+"Wir haben alle Server gestoppt und ein Backup der Minecraft-Dateien erstellt. Du kannst es herunterladen, wenn möglich. \n"
+" Wenn nicht, wird das Backup-Archiv nicht gelöschen werden. Danach drücke den  \\\"Jetzt aktualisieren\\\"-Button. \n"
+" Wir sichern die alten Minecraft-Dateien in einem temporären Verzeichnis und starten mit einer frischen Installation von MCA. Wenn \n"
+"  diese Installation beendet ist,  werden die alten Daten auf das neue System migriert <br> Bitte führe diesen \n"
+" Befehl aus: %s."
+
+#: mca-pages/install.page.php:140
+#@ minecraft-admin
+msgid "We detected you are using MS Windows. Minecraft Admin support is under developing at the moment. So be carefully."
+msgstr "Wir haben festgestellt du benutzt MS Windows. Die Unterstützung im Moment in der Entwicklungsphase. Also vorsichtig sein."
+
+#: mca-pages/install.page.php:145
+#@ minecraft-admin
+msgid "We didn't found Java. Please install it on your own."
+msgstr "Java wurde nicht gefunden. Installiere es bitte manuell."
+
+#: mca-pages/servers-befehle.page.php:52
+#: mca-pages/servers-befehle.page.php:65
+#@ minecraft-admin
+msgid "Stopping the server for maintenance. Try to reconnect in 60sec."
+msgstr "Stoppe Server für Wartungsarbeiten. Versuche in 60s wieder zu verbinden."
+
+#: mca-pages/servers-befehle.page.php:258
+#@ minecraft-admin
+msgid "Default World"
+msgstr "Standart Welt."
+
+#: mca-pages/servers-befehle.page.php:260
+#@ minecraft-admin
+msgid "change to default world"
+msgstr "Ändere zu standart Welt"
+
+#: mca-pages/servers-befehle.page.php:271
+#: mca-pages/servers-befehle.page.php:282
+#@ minecraft-admin
+msgid "Status"
+msgstr "Status"
+
+#: mca-pages/servers-befehle.page.php:271
+#@ minecraft-admin
+msgid "On"
+msgstr "An"
+
+#: mca-pages/servers-befehle.page.php:273
+#@ minecraft-admin
+msgid "deactivate"
+msgstr "deaktiviere"
+
+#: mca-pages/servers-befehle.page.php:282
+#@ minecraft-admin
+msgid "Off"
+msgstr "Aus"
+
+#: mca-pages/servers-befehle.page.php:284
+#@ minecraft-admin
+msgid "activate"
+msgstr "aktiviere"
+
+#: mca-pages/servers-befehle.page.php:328
+#: mca-pages/servers-cronjobs.page.php:389
+#@ minecraft-admin
+msgid "Worlds"
+msgstr "Welten"
+
+#: mca-pages/servers-befehle.page.php:341
+#@ minecraft-admin
+msgid "download & install"
+msgstr "Downloade & installiere"
+
+#: mca-pages/servers-befehle.page.php:342
+#@ minecraft-admin
+msgid "Here you can change the default world Minecraft is loading when start. Please remove all white spaces, special character (such as \"(\",\")\",\"-\",\"_\",\"§\",\"$\") from worlds name."
+msgstr "Hier kannst du die Standard Welt, die Minecraft bei Start lädt, ändern. Bitte entferne alle Leerzeichen, Sonderzeichen wie \"(\",\")\",\"-\",\"_\",\"§\",\"$\") vom Namen der Welt."
+
+#: mca-pages/servers-befehle.page.php:343
+#@ minecraft-admin
+msgid "Below you can download worlds and install them to your server. Supported formats are: .zip,.tar.gz, .rar"
+msgstr "Hier kannst du Welten auf den Server downloaden und installieren. Unterstützte Formate sind: .zip, .tar.gz, .rar"
+
+#: mca-pages/servers-cronjobs.page.php:274
+#@ minecraft-admin
+msgid "toggledownfall"
+msgstr "Schalte Regen um"
+
+#: mca-pages/servers-cronjobs.page.php:283
+#@ minecraft-admin
+msgid "set time to"
+msgstr "Setze Zeit zu"
+
+#: mca-pages/servers-cronjobs.page.php:286
+#@ minecraft-admin
+msgid "blacklist"
+msgstr "Blacklist"
+
+#: mca-pages/servers-cronjobs.page.php:289
+#@ minecraft-admin
+msgid "whitelist"
+msgstr "Whitelist"
+
+#: mca-pages/servers-cronjobs.page.php:292
+#@ minecraft-admin
+msgid "set gamemode"
+msgstr "setze Gamemode"
+
+#: mca-pages/servers-cronjobs.page.php:304
+#@ minecraft-admin
+msgid "set config to"
+msgstr "Setze Einstellung zu"
+
+#: mca-pages/servers-cronjobs.page.php:368
+#@ minecraft-admin
+msgid "additional paramter"
+msgstr "zusätzlicher Paramter"
+
+#: mca-pages/servers-cronjobs.page.php:369
+#@ minecraft-admin
+msgid "add option"
+msgstr "Option hinzufügen"
+
+#: mca-pages/servers-cronjobs.page.php:382
+#@ minecraft-admin
+msgid "remove from blacklist"
+msgstr "entferne von Blacklist"
+
+#: mca-pages/servers-cronjobs.page.php:383
+#@ minecraft-admin
+msgid "remove from whitelist"
+msgstr "entferne von Whitelist"
+
+#: mca-pages/servers-filebrowser.page.php:50
+#@ minecraft-admin
+msgid "create a new dir"
+msgstr "Erstelle neues Verzeichnis"
+
+#: mca-pages/settings.page.php:91
+#@ minecraft-admin
+msgid "Remove all data from Minecraft Admin. This includes the plugins settings and the server data."
+msgstr "Alle Daten von Minecraft Admin entfernen. Dies beinhaltet die Plugins-Einstellungen und die Serverdaten."
+

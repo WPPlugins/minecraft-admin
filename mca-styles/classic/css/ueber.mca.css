@@ -1,0 +1,62 @@
+/**
+ *
+ *
+ * About tab CSS
+ *
+ *
+ **/
+#mca_links_author a, #mca_links_plugin a {
+    text-decoration: none;
+}
+
+#mca_links_author h2, #mca_links_plugin h2 {
+    font-size: 35pt;
+}
+
+#mca_links_plugin {
+    float: left;
+    width: 48%;
+    border-right: 5px solid;
+}
+
+#mca_links_author {
+    float: right;
+    height: 320px;
+    width: 50%;
+}
+
+#debug_infos {
+    font-size: 35pt;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    top: 50px;
+}
+
+#mca_links_author img {
+    height: 128px;
+    margin: 0 0 0 -17px;
+    padding: 0;
+    position: relative;
+    width: 128px;
+}
+
+#mca_version {
+    font-size: 40pt;
+    height: 170px;
+    text-align: center;
+}
+
+#mca #mca_ueber h2 {
+    float: left;
+    font-size: 84pt;
+    width: 100%;
+}
+
+.helpvideo {
+    clear: both;
+    font-size: 66pt;
+    position: relative;
+    text-align: center;
+    top: 20px;
+}

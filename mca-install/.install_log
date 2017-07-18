@@ -1,0 +1,245 @@
+
+[1;32mMCA INSTALL: ################################################[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #               Welcome to the                 #[m
+
+[1;32mMCA INSTALL: #           MINECRAFT ADMIN INSTALLER          #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #        Please go back to your website        #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: #         This installer starts in 10sec       #[m
+
+[1;32mMCA INSTALL: #           [1;37;41mpress CRTL+C  to cancle[m            #[m
+
+[1;32mMCA INSTALL: #                                              #[m
+
+[1;32mMCA INSTALL: ################################################[m
+
+[1;32mMCA INSTALL: This installer installs MSN (Minecraft Server Manager), a powerfull backend for Minecraft Servers.[m
+
+[1;32mMCA INSTALL: Get more information at http://profenter.de/blog/948-backend-von-mca-backend-auf-msn-umgestellt[m
+
+[1;32mMCA INSTALL: Creating default user 'www-data'[m
+
+[1;32mMCA INSTALL: Updating sources[m
+OK   http://repo.profenter.de trusty InRelease
+Ign http://extras.ubuntu.com trusty InRelease
+Ign http://de.archive.ubuntu.com trusty InRelease
+Ign http://ppa.launchpad.net trusty InRelease
+OK   http://extras.ubuntu.com trusty Release.gpg
+OK   http://repo.profenter.de trusty/main amd64 Packages
+Ign http://de.archive.ubuntu.com trusty-updates InRelease
+OK   http://ppa.launchpad.net trusty Release.gpg
+Ign http://de.archive.ubuntu.com trusty-backports InRelease
+OK   http://repo.profenter.de trusty/main i386 Packages
+OK   http://extras.ubuntu.com trusty Release
+OK   http://ppa.launchpad.net trusty Release
+OK   http://de.archive.ubuntu.com trusty Release.gpg
+OK   http://extras.ubuntu.com trusty/main Sources
+OK   http://ppa.launchpad.net trusty/main amd64 Packages
+Holen: 1 http://de.archive.ubuntu.com trusty-updates Release.gpg [933 B]
+OK   http://extras.ubuntu.com trusty/main amd64 Packages
+OK   http://ppa.launchpad.net trusty/main i386 Packages
+OK   http://de.archive.ubuntu.com trusty-backports Release.gpg
+OK   http://extras.ubuntu.com trusty/main i386 Packages
+OK   http://ppa.launchpad.net trusty/main Translation-en
+OK   http://de.archive.ubuntu.com trusty Release
+Ign http://security.ubuntu.com trusty-security InRelease
+Holen: 2 http://de.archive.ubuntu.com trusty-updates Release [59,7 kB]
+OK   http://security.ubuntu.com trusty-security Release.gpg
+OK   http://de.archive.ubuntu.com trusty-backports Release
+OK   http://de.archive.ubuntu.com trusty/main Sources
+Ign http://repo.profenter.de trusty/main Translation-de_DE
+OK   http://security.ubuntu.com trusty-security Release
+OK   http://de.archive.ubuntu.com trusty/restricted Sources
+Ign http://repo.profenter.de trusty/main Translation-de
+OK   http://de.archive.ubuntu.com trusty/universe Sources
+Ign http://repo.profenter.de trusty/main Translation-en
+OK   http://de.archive.ubuntu.com trusty/multiverse Sources
+OK   http://de.archive.ubuntu.com trusty/main amd64 Packages
+OK   http://security.ubuntu.com trusty-security/main Sources
+OK   http://de.archive.ubuntu.com trusty/restricted amd64 Packages
+OK   http://de.archive.ubuntu.com trusty/universe amd64 Packages
+OK   http://de.archive.ubuntu.com trusty/multiverse amd64 Packages
+OK   http://security.ubuntu.com trusty-security/restricted Sources
+Ign http://extras.ubuntu.com trusty/main Translation-de_DE
+OK   http://de.archive.ubuntu.com trusty/main i386 Packages
+Ign http://extras.ubuntu.com trusty/main Translation-de
+OK   http://de.archive.ubuntu.com trusty/restricted i386 Packages
+Ign http://extras.ubuntu.com trusty/main Translation-en
+OK   http://security.ubuntu.com trusty-security/universe Sources
+OK   http://de.archive.ubuntu.com trusty/universe i386 Packages
+OK   http://de.archive.ubuntu.com trusty/multiverse i386 Packages
+OK   http://security.ubuntu.com trusty-security/multiverse Sources
+OK   http://de.archive.ubuntu.com trusty/main Translation-de
+OK   http://de.archive.ubuntu.com trusty/main Translation-en
+OK   http://security.ubuntu.com trusty-security/main amd64 Packages
+OK   http://de.archive.ubuntu.com trusty/multiverse Translation-de
+OK   http://de.archive.ubuntu.com trusty/multiverse Translation-en
+OK   http://security.ubuntu.com trusty-security/restricted amd64 Packages
+OK   http://de.archive.ubuntu.com trusty/restricted Translation-de
+OK   http://de.archive.ubuntu.com trusty/restricted Translation-en
+OK   http://security.ubuntu.com trusty-security/universe amd64 Packages
+OK   http://de.archive.ubuntu.com trusty/universe Translation-de
+OK   http://de.archive.ubuntu.com trusty/universe Translation-en
+OK   http://security.ubuntu.com trusty-security/multiverse amd64 Packages
+Holen: 3 http://de.archive.ubuntu.com trusty-updates/main Sources [129 kB]
+OK   http://security.ubuntu.com trusty-security/main i386 Packages
+Holen: 4 http://de.archive.ubuntu.com trusty-updates/restricted Sources [1.408 B]
+Holen: 5 http://de.archive.ubuntu.com trusty-updates/universe Sources [88,2 kB]
+OK   http://security.ubuntu.com trusty-security/restricted i386 Packages
+Holen: 6 http://de.archive.ubuntu.com trusty-updates/multiverse Sources [3.517 B]
+Holen: 7 http://de.archive.ubuntu.com trusty-updates/main amd64 Packages [343 kB]
+OK   http://security.ubuntu.com trusty-security/universe i386 Packages
+OK   http://security.ubuntu.com trusty-security/multiverse i386 Packages
+OK   http://security.ubuntu.com trusty-security/main Translation-en
+Holen: 8 http://de.archive.ubuntu.com trusty-updates/restricted amd64 Packages [5.820 B]
+Holen: 9 http://de.archive.ubuntu.com trusty-updates/universe amd64 Packages [214 kB]
+OK   http://security.ubuntu.com trusty-security/multiverse Translation-en
+OK   http://security.ubuntu.com trusty-security/restricted Translation-en
+Holen: 10 http://de.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [9.365 B]
+Holen: 11 http://de.archive.ubuntu.com trusty-updates/main i386 Packages [337 kB]
+OK   http://security.ubuntu.com trusty-security/universe Translation-en
+Holen: 12 http://de.archive.ubuntu.com trusty-updates/restricted i386 Packages [5.820 B]
+Holen: 13 http://de.archive.ubuntu.com trusty-updates/universe i386 Packages [215 kB]
+Holen: 14 http://de.archive.ubuntu.com trusty-updates/multiverse i386 Packages [9.546 B]
+OK   http://de.archive.ubuntu.com trusty-updates/main Translation-en
+OK   http://de.archive.ubuntu.com trusty-updates/multiverse Translation-en
+OK   http://de.archive.ubuntu.com trusty-updates/restricted Translation-en
+OK   http://de.archive.ubuntu.com trusty-updates/universe Translation-en
+OK   http://de.archive.ubuntu.com trusty-backports/main Sources
+OK   http://de.archive.ubuntu.com trusty-backports/restricted Sources
+OK   http://de.archive.ubuntu.com trusty-backports/universe Sources
+OK   http://de.archive.ubuntu.com trusty-backports/multiverse Sources
+OK   http://de.archive.ubuntu.com trusty-backports/main amd64 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/universe amd64 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/main i386 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/restricted i386 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/universe i386 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+OK   http://de.archive.ubuntu.com trusty-backports/main Translation-en
+OK   http://de.archive.ubuntu.com trusty-backports/multiverse Translation-en
+OK   http://de.archive.ubuntu.com trusty-backports/restricted Translation-en
+OK   http://de.archive.ubuntu.com trusty-backports/universe Translation-en
+Ign http://de.archive.ubuntu.com trusty/main Translation-de_DE
+Ign http://de.archive.ubuntu.com trusty/multiverse Translation-de_DE
+Ign http://de.archive.ubuntu.com trusty/restricted Translation-de_DE
+Ign http://de.archive.ubuntu.com trusty/universe Translation-de_DE
+Es wurden 1.422 kB in 4 s geholt (327 kB/s).
+Paketlisten werden gelesen...
+Paketlisten werden gelesen...
+Abhängigkeitsbaum wird aufgebaut....
+Statusinformationen werden eingelesen....
+Die folgenden Pakete werden aktualisiert (Upgrade):
+  numix-icon-theme
+1 aktualisiert, 0 neu installiert, 0 zu entfernen und 0 nicht aktualisiert.
+Es müssen 2.022 kB an Archiven heruntergeladen werden.
+Nach dieser Operation werden 190 kB Plattenplatz zusätzlich benutzt.
+Holen: 1 http://ppa.launchpad.net/numix/ppa/ubuntu/ trusty/main numix-icon-theme all 0.3+199~201410251131~ubuntu14.04.1 [2.022 kB]
+Es wurden 2.022 kB in 1 s geholt (1.400 kB/s).
+(Lese Datenbank ... 258062 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von .../numix-icon-theme_0.3+199~201410251131~ubuntu14.04.1_all.deb ...
+Entpacken von numix-icon-theme (0.3+199~201410251131~ubuntu14.04.1) über (0.3+197~201410241133~ubuntu14.04.1) ...
+numix-icon-theme (0.3+199~201410251131~ubuntu14.04.1) wird eingerichtet ...
+
+[1;32mMCA INSTALL: Installing required packages[m
+Paketlisten werden gelesen...
+Abhängigkeitsbaum wird aufgebaut....
+Statusinformationen werden eingelesen....
+zip ist schon die neueste Version.
+rsync ist schon die neueste Version.
+Vorgeschlagene Pakete:
+  iselect screenie byobu
+Die folgenden NEUEN Pakete werden installiert:
+  screen
+0 aktualisiert, 1 neu installiert, 0 zu entfernen und 0 nicht aktualisiert.
+Es müssen 646 kB an Archiven heruntergeladen werden.
+Nach dieser Operation werden 973 kB Plattenplatz zusätzlich benutzt.
+Holen: 1 http://de.archive.ubuntu.com/ubuntu/ trusty/main screen amd64 4.1.0~20120320gitdb59704-9 [646 kB]
+Es wurden 646 kB in 0 s geholt (1.194 kB/s).
+Vormals nicht ausgewähltes Paket screen wird gewählt.
+(Lese Datenbank ... 258090 Dateien und Verzeichnisse sind derzeit installiert.)
+Vorbereitung zum Entpacken von .../screen_4.1.0~20120320gitdb59704-9_amd64.deb ...
+Entpacken von screen (4.1.0~20120320gitdb59704-9) ...
+Trigger für man-db (2.6.7.1-1ubuntu1) werden verarbeitet ...
+Trigger für install-info (5.2.0.dfsg.1-2) werden verarbeitet ...
+Trigger für ureadahead (0.100.0-16) werden verarbeitet ...
+screen (4.1.0~20120320gitdb59704-9) wird eingerichtet ...
+Trigger für ureadahead (0.100.0-16) werden verarbeitet ...
+
+[1;32mMCA INSTALL: Creating MSM directories[m
+
+[1;32mMCA INSTALL: Downloading latest MSM configuration file[m
+
+[1;32mMCA INSTALL: Downloading latest MSM cron file[m
+
+[1;32mMCA INSTALL: Downloading latest MSM version[m
+
+[1;32mMCA INSTALL: Patching MSM configuration file[m
+
+[1;32mMCA INSTALL: Patching MSM cron file[m
+
+[1;32mMCA INSTALL: Patching MSM init file[m
+
+[1;32mMCA INSTALL: Installing MSM configuration file[m
+
+[1;32mMCA INSTALL: Installing MSM cron file[m
+
+[1;32mMCA INSTALL: Installing MSM init file[m
+
+[1;32mMCA INSTALL: Making MSM accessible as the command 'msm'[m
+
+[1;32mMCA INSTALL: Enabling automatic startup and shutdown[m
+ Adding system startup for /etc/init.d/msm ...
+   /etc/rc0.d/K20msm -> ../init.d/msm
+   /etc/rc1.d/K20msm -> ../init.d/msm
+   /etc/rc6.d/K20msm -> ../init.d/msm
+   /etc/rc2.d/S20msm -> ../init.d/msm
+   /etc/rc3.d/S20msm -> ../init.d/msm
+   /etc/rc4.d/S20msm -> ../init.d/msm
+   /etc/rc5.d/S20msm -> ../init.d/msm
+
+[1;32mMCA INSTALL: Asking MSM to update itself[m
+Checking for updates to version 0.8.16... Already at latest version.
+Checking if any files need to be updated... Done.
+Updating will create the following files:
+  > The bash completion script: /etc/bash_completion.d/msm
+  > Version file:               /var/www/wordpress/wp-content/minecraft.dir//versioning/minecraft/1.2.0.sh
+  > Version file:               /var/www/wordpress/wp-content/minecraft.dir//versioning/minecraft/1.3.0.sh
+  > Version file:               /var/www/wordpress/wp-content/minecraft.dir//versioning/craftbukkit/1.2.0.sh
+Updating MSM to 0.8.16:
+  > Created: /etc/bash_completion.d/msm
+  > Created: /var/www/wordpress/wp-content/minecraft.dir//versioning/minecraft/1.2.0.sh
+  > Created: /var/www/wordpress/wp-content/minecraft.dir//versioning/minecraft/1.3.0.sh
+  > Created: /var/www/wordpress/wp-content/minecraft.dir//versioning/craftbukkit/1.2.0.sh
+Done.
+Checking for updates to version 0.8.16... Already at latest version.
+Checking if any files need to be updated... No. We're all done.
+
+[1;32mMCA INSTALL: Setup default jar groups[m
+Creating jar group... Done.
+Creating jar group... Done.
+Creating jar group... Done.
+Creating jar group... Done.
+
+[1;32mMCA INSTALL: Done. Type in console 'msm help' to get started. Go to next step. Have fun![m

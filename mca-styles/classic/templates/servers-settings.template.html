@@ -1,0 +1,95 @@
+<div class="wrap">
+    <h2>
+        {$settings}
+    </h2>
+    {if $mc_updated ===true}
+    <div id='message' class='updated fade'>
+        <p>
+            {$updated}
+        </p>
+    </div>
+    {/if}
+    <form method="post" action="{$action}">
+        <table class="form-table">
+            <tr valign="top">
+                <th scope="row">
+                    {$path}
+                </th>
+                <td>
+                    <input type="text" name="mc_settings_options[pfad]" value="{$pfad}" size="{$anzahlpfad}px"
+                           disabled="disabled"/>
+                </td>
+                <td>
+                    {$pfad_info}
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    {$elogs}
+                </th>
+                <td>
+                    <input type="text" name="mc_settings_options[log]" value="{$logs}"/>
+                </td>
+                <td>
+                    {$logs_info}
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    {$eram}
+                </th>
+                <td>
+                    <input type="text" name="mc_settings_options[ram]" value="{$ram}"/>
+                </td>
+                <td>
+                    {$RAM_info}
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    {$ebackup}
+                </th>
+                <td>
+                    <input type="text" name="mc_settings_options[backup]" value="{$backuppfad}" size="{$anzahlbackup}px"
+                           disabled="disabled"/>
+                </td>
+                <td>
+                    {$backup_info}
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    {$eserver}
+                </th>
+                <td>
+                    <select name="mc_settings_options[server]" size="1">
+                        {foreach key=id item=jargroup from=$jarlist}
+                        <option value="{$jargroup}"
+                        {if $selected == $jargroup} selected="selected"{/if}>
+                        {if $selected == $jargroup}--->{/if} {$jargroup}
+                        </option>
+                        {/foreach}
+                    </select>
+                </td>
+                <td>
+                    {$server_info}
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    {$ename}
+                </th>
+                <td>
+                    <input type="text" name="mc_settings_options[name]" value="{$name}"/>
+                </td>
+                <td>
+                    {$name_info}
+                </td>
+            </tr>
+        </table>
+        <p class="submit">
+            <input type="submit" name="submit" class="button-primary" value="{$save_changes}"/>
+        </p>
+        <input type="hidden" name="settings" value="hidden"/>
+    </form>
+</div>

@@ -1,0 +1,146 @@
+<div id="install">
+    <div id="info_right">
+        <h1>
+            {$minecraftadmin} - {$version}
+        </h1>
+    </div>
+    <div class="Table">
+        <div class="Row">
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$help_h}</h3>
+                </div>
+                <div class="content">{$intro}
+                    <div class="info">{$help}</div>
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$update_h}</h3>
+                </div>
+                <div class="content">
+                    {if $schritt == 1} {$hinweis_e}
+                    <p>
+                        <a href="{$steptoupdateurl}" class="button">{$update_e}</a>
+                    </p>
+                    {elseif $schritt == Update}
+                    <div class="postbox">
+                        <h3>{$schritt_e} {$schritt}</h3>
+
+                        <div class="inside">
+                            {$stepupdate_message}
+                            <br/>
+                            <a href="{$backup_url}" class="button">{$backupbutton_e}</a>
+                            <a href="{$stepto2url}" class="button">{$updatenow_e}</a>
+                        </div>
+                    </div>
+                    {/if}
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$schritt_e} 1</h3>
+                </div>
+                <div class="content">
+                    <div id="lizenz">{$agb}</div>
+                    <br/>
+                    <br/>
+                    {if $schritt == 1}
+                    <a href="{$stepto3url}" class="button" id="lizenzbutton">{$install_e2}</a>
+                    {/if}
+                </div>
+            </div>
+        </div>
+        <div class="Row">
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$schritt_e} 2</h3>
+                </div>
+                <div class="content">
+                    {if $schritt >= 3}
+                    {if isset($step3_wirteable)}
+                    {$step3_wirteable}
+                    {else}
+                    <div class="updated">{$ok}</div>
+                    {/if}
+                    <br/>
+                    <br/>
+                    {/if}
+                    {if $schritt == 3}
+                    <a href="{$stepto4url}" class="button">{$install_e3}</a>
+                    {/if}
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$schritt_e} 3</h3>
+                </div>
+                <div class="content" id="installbox">
+                    {if $schritt >= 4}
+                    {if isset($step4_error)}
+                    <div class="error">{$step4_error}</div>
+                    {else}
+                    {if $step4_os == "linux"}
+                    <div style="display: none;" class="logundbutton">
+                        <div class="loading">
+                            <span>{$loading_e}</span>
+                        </div>
+                        <textarea id="log" style="height:25px;" cols="100"></textarea>
+                        <br/>
+
+                        <div style="display:none;" class="fertig_install">
+                            <a href="{$stepto5url}" class="button">{$install_e4}</a>
+                        </div>
+                    </div>
+                    <div class="befehle">
+                        <br/>
+                        <br/>
+
+                        <div class="info">{$step4_hilfe}</div>
+                        <br/>
+
+                        <div class="box install">
+                            <h4 style="font-size: 25pt;">Befehl auf dem Root Server ausführen</h4>
+
+                            <div class="info">{$step4_intro}</div>
+                            <br/>
+                            <br/>
+                            <br/> {$deb}:
+                            <br/>
+                            <textarea rows="1">{$step4_befehl_debian}</textarea>
+                            <br/>
+                            <br/> {$red}:
+                            <br/>
+                            <textarea rows="1">{$step4_befehl_redhat}</textarea>
+                            <br/>
+                            <br/> {$others}:
+                            <br/>
+                            <textarea rows="1">{$step4_befehl_sonstiges}</textarea>
+                        </div>
+                    </div>
+                    {elseif $step4_os == "win"}
+                    <div class="info">{$step4_intro}</div>
+                    <a href="{$stepto5url}" class="button">{$install_e4}</a>
+                    {/if}
+                    {/if}
+                    {/if}
+                </div>
+            </div>
+            <div class="Cell">
+                <div class="title">
+                    <h3>{$schritt_e} 4</h3>
+                </div>
+                <div class="content">
+                    {if $schritt == 5}
+                    {$step5_message}
+                    <br/>
+                    <br/>
+                    {if $step5_finished}
+                    <a href="{$steptofertigurl}" class="button">{$install_e5}</a>
+                    {/if}
+                    {/if}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

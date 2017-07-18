@@ -1,0 +1,279 @@
+<?php
+
+/**
+ * Minecraft Admin
+ *
+ * @category   MCA_pages
+ * @package    MCA Minecraft Admin
+ * @name       Minecraft Admin
+ * @author     Profenter Systems
+ * @copyright  2012-2013 Profenter Systems "service@profenter.de"
+ * @version    see http://wordpress.org/plugins/minecraft-admin/changelog/
+ * @license    http://profenter.de/profenter/lizenzierung/psl-1-1 PSL (Profenter Systems License) 1.1
+ * @link       http://profenter.de/projekte/minecraft-admin
+ * @see        http://wordpress.org/plugins/minecraft-admin
+ * @since      File available since Release 0.7.9
+ * @deprecated File not deprecated
+ * @Todo see @http://profenter.de/projekte/minecraft-admin#todo
+ *
+ *
+ * @class servers_plugins_page
+ * @name adds a plugin installer
+ * @version 0.0.1
+ */
+class servers_plugins_page extends pages
+{
+    function setup()
+    {
+        global $blog_id;
+        $to_tem = array();
+        $lines = '';
+        $base = MCA_MINECRAFT_DIR . $blog_id . '/' . $this->serverid . '/';
+        if (!isset($_GET["cache"])) {
+            $_GET["cache"] = "";
+        } //!isset($_GET["cache"])
+        if ($_GET["cache"] == "false") {
+            MCAF::lochen_verzeichnis($base . ".tmp");
+            echo '<meta http-equiv="refresh" content="0; URL=' . MCAF::mc_url(array()) . '"> ';
+        } //$_GET["cache"] == "false"
+
+        $val = (!empty($_POST["install"])) ? 'value="' . $_POST["install"] . '"' : "";
+        if (empty($val)) {
+            $val = (!empty($_GET["install"])) ? 'value="' . $_GET["install"] . '"' : "";
+        }
+
+        if (!is_dir($base . ".tmp/")) {
+            mkdir($base . ".tmp/");
+        } //!is_dir($base . ".tmp/")
+        if (!is_file($base . ".tmp/created-by-mc-admin.txt")) {
+            touch($base . ".tmp/created-by-mc-admin.txt");
+        } //!is_file($base . ".tmp/created-by-mc-admin.txt")
+        if (!is_dir($base . "plugins/")) {
+            mkdir($base . "plugins/");
+        } //!is_dir($base . "plugins/")
+        $handle = opendir($base . "plugins/");
+        $finfo = finfo_open(FILEINFO_MIME_TYPE);
+        while ($datei = readdir($handle)) {
+
+
+            if (finfo_file($finfo, $base . "plugins/" . $datei) == "application/zip" || finfo_file($finfo, $base . "plugins/" . $datei) == "application/jar") {
+                if (!is_file($base . ".tmp/$datei.yml")) {
+                    $datei_ohne_jar = str_replace(".jar", "", $datei);
+                    mkdir($base . ".tmp/plugin-" . $datei_ohne_jar . "/");
+
+                    exec("unzip " . $base . "plugins/" . $datei . " -d " . $base . ".tmp/plugin-" . $datei_ohne_jar . "/");
+                    if (is_file($base . ".tmp/plugin-" . $datei_ohne_jar . "/plugin.yml")) {
+                        exec("cp " . $base . ".tmp/plugin-" . $datei_ohne_jar . "/plugin.yml " . $base . ".tmp/" . $datei_ohne_jar . ".yml");
+
+                    } else {
+
+                        $unter = opendir($base . ".tmp/plugin-" . $datei_ohne_jar);
+                        while ($find = readdir($unter)) {
+                            $teilen = explode(".", $find);
+                            if ($teilen[1] == "jar") {
+                                $find_ohne_jar = str_replace(".jar", "", $teilen[0]);
+                                mkdir($base . ".tmp/plugin-" . $datei_ohne_jar . "/plugin-" . $find_ohne_jar);
+                                exec("unzip " . $base . ".tmp/plugin-" . $datei_ohne_jar . "/" . $find . " -d " . $base . ".tmp/plugin-" . $datei_ohne_jar . "/plugin-" . $find_ohne_jar);
+                                exec("cp " . $base . ".tmp/plugin-" . $datei_ohne_jar . "/plugin-" . $find_ohne_jar . "/plugin.yml " . $base . ".tmp/" . $datei_ohne_jar . ".yml");
+
+                            }
+                        }
+                    }
+                    exec("rm -r " . $base . ".tmp/plugin-" . $datei_ohne_jar);
+                } //!is_file($base . ".tmp/$datei.yml")
+            } //mime_content_type($base . "plugins/" . $datei) == "application/zip"
+        } //$datei = readdir($handle)
+        finfo_close($finfo);
+        closedir($handle);
+        if (empty($val)) {
+
+            $handle = opendir($base . ".tmp/");
+            while ($dateiyml = readdir($handle)) {
+// 						
+                if ($dateiyml != "created-by-mc-admin.txt" && $dateiyml != "." && strpos($dateiyml, ".yml") !== false && $dateiyml != ".." && is_file($base . ".tmp/" . $dateiyml)) {
+                    $yml = file($base . ".tmp/" . $dateiyml);
+                    foreach ($yml as $key => $value) {
+
+                        $ex = explode(":", $value);
+
+                        if ($ex[0] == "name") {
+                            $name = str_replace(" ", "", $ex[1]);
+                            $name = str_replace("\n", "", $name);
+                            $name = str_replace("\r", "", $name);
+                        } //$ex[0] == "name"
+                        if ($ex[0] == "version") {
+                            $version = str_replace(" ", "", strtolower($ex[1]));
+                            $version = str_replace("\n", "", $version);
+                            $version = str_replace("\r", "", $version);
+                            $version = str_replace('"', "", $version);
+                        } //$ex[0] == "version"
+                    } //$yml as $key => $value
+
+                    $rss_url = 'http://dev.bukkit.org/server-mods/' . $name . '/files.rss';
+                    if (!is_file($base . ".tmp/" . $name . ".rss")) {
+                        exec('wget ' . $rss_url . ' -O ' . $base . ".tmp/" . $name . ".rss");
+                    } //!is_file($base . ".tmp/" . $name . ".rss")
+                    $uptodate = false;
+                    $error = false;
+                    $xml = @simplexml_load_file($base . ".tmp/" . $name . ".rss");
+
+                    if (empty($xml->channel->item) or $xml->channel->item == "" or $xml->channel->item == " ") {
+                        if (!is_file($base . ".tmp/" . $name . ".html")) {
+                            exec('wget "http://dev.bukkit.org/server-mods/' . $name . '/files/" -O ' . $base . '.tmp/' . $name . '.html --no-check-certificate');
+                        } //!is_file($base . ".tmp/" . $name . ".html")
+                        $bukkitorg = file($base . ".tmp/" . $name . ".html");
+                        if (!empty($bukkitorg)) {
+                            foreach ($bukkitorg as $id => $lines) {
+                                if (!empty($lines)) {
+                                    $lines = str_replace(" ", "", strtolower($lines));
+                                    $lines = str_replace("\n", "", $lines);
+                                    $lines = str_replace("\r", "", $lines);
+                                    if (strpos($lines, "noresultsfound") !== false) {
+                                        $error = __("There aren't downloads anymore.", "minecraft-admin");
+                                    } //strpos($lines, "noresultsfound") !== false
+                                    elseif (strpos($lines, '<h3>login</h3>') !== false) {
+                                        $error = __("The plugin wasn't found on bukkit.org. We can't update it automatically.", "minecraft-admin");
+                                    } //strpos($lines, '<h3>login</h3>') !== false
+                                } //!empty($lines)
+                            } //$bukkitorg as $id => $lines
+                        } //!empty($bukkitorg)
+                        else {
+                            $error = __("The plugin wasn't found on bukkit.org. We can't update it automatically.", "minecraft-admin");
+                        }
+                    } //empty($xml->channel->item) or $xml->channel->item == "" or $xml->channel->item == " "
+                    else if (!empty($xml->channel->item) && $xml->channel->item != "" && $xml->channel->item != " ") {
+                        foreach ($xml->channel->item as $id => $item) {
+                            $tit = (array)$item->title;
+                            $test = explode(" ", $tit[0]);
+                            if (is_string($test[0])) {
+                                $tit[0] = $test[1];
+                            }
+
+                            $version_ohne_klammern = preg_replace('#\(.*?\)#m', '', $version);
+                            $title_ohne_klammern = preg_replace('#\(.*?\)#m', '', $tit[0]);
+
+
+                            $cross = MCAF::cartesian(array(array(
+                                $version_ohne_klammern,
+                                $version,
+                                "v" . $version,
+                                strtolower($name) . " " . $version_ohne_klammern,
+                                strtolower($name) . " v" . $version_ohne_klammern,
+                                strtolower($name) . " " . $version,
+                                strtolower($name) . " v" . $version
+                            ), array(
+                                $title_ohne_klammern,
+                                strtolower($tit[0]),
+                                "v" . strtolower($tit[0])
+                            )));
+                            $result = array_diff(array(
+                                $version_ohne_klammern,
+                                $version,
+                                "v" . $version,
+                                strtolower($name) . " " . $version_ohne_klammern,
+                                strtolower($name) . " v" . $version_ohne_klammern,
+                                strtolower($name) . " " . $version,
+                                strtolower($name) . " v" . $version
+                            ), array(
+                                $title_ohne_klammern,
+                                strtolower($tit[0]),
+                                "v" . strtolower($tit[0])
+                            ));
+                            $cross = (empty($cross)) ? array() : $cross;
+
+                            foreach ($cross as $arr) {
+                                if ($arr[0] == $arr[1]) {
+                                    $uptodate = true;
+                                    break;
+                                } //$arr[0] == $arr[1]
+                            } //$cross as $arr
+                        } //$xml->channel->item as $id => $item
+                    } //!empty($xml->channel->item) && $xml->channel->item != "" && $xml->channel->item != " "
+
+
+                    $to_tem[] = array("name" => $name,
+                        "version" => $version,
+                        "file" => str_replace(".yml", ".jar", $dateiyml),
+
+                        "up" => ($uptodate) ? "Ja" : ((empty($error) && $error === false) ? __("please update", "minecraft-admin") : $error)
+                    );
+
+                } //$dateiyml != "created-by-mc-admin.txt" && $dateiyml != "." && strpos($dateiyml, ".yml") !== false && $dateiyml != ".." && is_file($base . ".tmp/" . $dateiyml)
+            } //$dateiyml = readdir($handle)
+            closedir($handle);
+
+
+        } //empty($val)
+        else {
+
+            require_once(MCA_PLUGIN_DIR_INCLUDE . '/mca-classes/snoopy.class.php');
+
+
+            $snoopy = new Snoopy;
+            if (!empty($_GET["download"])) {
+                $name = str_replace("/server-mods/", "", $_GET["download"]);
+                $name = str_replace("/", "", $name);
+                $rss_url = 'http://dev.bukkit.org' . $_GET["download"] . 'files.rss';
+                exec('wget ' . $rss_url . ' -O ' . $base . ".tmp/" . $name . ".rss");
+                $xml = simplexml_load_file($base . ".tmp/" . $name . ".rss");
+                $link = (string)$xml->channel->item[0]->link;
+                $snoopy->fetch($link);
+                $erste = explode('<li class="user-action user-action-download">', $snoopy->results);
+                $zweite = explode('Download', $erste[1]);
+                $zweite[0] = str_replace('<span><a href="', "", $zweite[0]);
+                $zweite[0] = str_replace('">', "", $zweite[0]);
+                exec('wget ' . $zweite[0] . ' -O ' . $base . "plugins/" . $name . ".jar");
+                exec('sh /etc/init.d/minecraft restart');
+                echo '<meta http-equiv="refresh" content="0; URL=' . MCAF::mc_url(array()) . '"> ';
+            } //!empty($_GET["download"])
+            $snoopy->fetch("http://dev.bukkit.org/search/?scope=projects&search=" . $_POST["install"]);
+
+
+            $explode = explode('<div class="listing-container">', $snoopy->results);
+            $explodes = explode('<div class="listing-pagination listing-pagination-bottom">', $explode[1]);
+            $lines = $explodes[0];
+            $lines = preg_replace('/<td class="col-search-entry"><h2><a href="(.*)">(.*)<\/a><\/h2><\/td>/', '<td class="col-search-entry"><h2><a href="$1">$2</a></h2><br /><a href="
+						' . MCAF::mc_url(array('install' => $_POST["install"], "download" => "$1")) . '" style="    background: none repeat scroll 0 0 green;    color: white;" class="button">' . __("install", "minecraft-admin") . '</a></td>', $lines);
+            $lines = str_replace("\n", "", $lines);
+            $lines = str_replace("\r", "", $lines);
+            $lines = str_replace('<div class="listing-container-inner">', '<div><br />', $lines);
+            $lines = str_replace('<td class="col-status"></td>', "", $lines);
+            $lines = str_replace('<colgroup><col/><col/><col/><col/></colgroup>', "", $lines);
+            $lines = str_replace('<td colspan="4" class="summary">', '<td></td><td></td><td colspan="4" class="summary">', $lines);
+            $lines = str_replace('<span><span></span></span>', '', $lines);
+            $lines = str_replace('href="/', 'href="http://dev.bukkit.org/', $lines);
+            $lines = str_replace('<thead><tr><th scope="col" class="col-status single-col"></th>', '', $lines);
+
+        }
+
+        MCADB::set('mca_common');
+
+        $vars = array(
+            "e_install" => __('install', 'minecraft-admin'),
+            "cache_url" => MCAF::mc_url(array(
+                    "cache" => "false"
+                )),
+            "val" => $val,
+            "e_send" => __('send', 'minecraft-admin'),
+            "e_placeholder" => __('plugin name', 'minecraft-admin'),
+            "installed" => MCADB::getOption("value", array(
+                    "type" => "installed"
+                )),
+            "e_cache" => __("clear cache", "minecraft-admin"),
+            "e_name" => __("name", "minecraft-admin"),
+            "e_version" => __("version", "minecraft-admin"),
+            "e_options" => __("options", "minecraft-admin"),
+            "e_plugin" => __("plugin file", "minecraft-admin"),
+            "e_webseite" => __("Bukkit website", "minecraft-admin"),
+            "e_dev" => __("Bukkit Dev", "minecraft-admin"),
+            "e_uptodate" => __("Up-To-Date?", "minecraft-admin"),
+            "show" => $lines,
+            "data" => $to_tem
+        );
+
+        $this->vars = $vars;
+
+    }
+}
+
+?>
